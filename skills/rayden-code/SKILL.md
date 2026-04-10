@@ -35,29 +35,45 @@ Generate production-quality React + Tailwind CSS code using the Rayden UI compon
 
 ## Examples
 
-### Build a dashboard
+### Vibe code a SaaS dashboard
 
 ```
 /rayden-code a dashboard with KPI cards, a recent orders table, and an activity feed
 ```
 
-Generates a full dashboard page with MetricsCard grid, Table with sorting, and ActivityFeed sidebar — all using Rayden components with proper imports.
+**Use case:** You're building an internal analytics tool and need a full dashboard page with MetricsCard grid, sortable Table, and ActivityFeed sidebar — all with correct Rayden imports and token classes.
 
-### Build an auth page
+### Scaffold a login page
 
 ```
 /rayden-code login page with email and password
 ```
 
-Generates a centered auth form with Input components, Button, and proper visual hierarchy.
+**Use case:** You need a centered auth form with Input components, a primary Button, and proper visual hierarchy — following Rayden's "Auth / Focused Form" pattern.
 
-### Build a settings page
+### Build an admin settings page
 
 ```
 /rayden-code settings page with profile section, notification toggles, and danger zone
 ```
 
-Generates a single-column settings layout with form sections, Toggle components, and a destructive action area.
+**Use case:** You're adding a settings area to your app and need form sections with Toggle components, a destructive action zone, and a single-column constrained layout.
+
+### Create a pricing page
+
+```
+/rayden-code pricing page with 3 tiers and a feature comparison table
+```
+
+**Use case:** You need a marketing pricing section with Card components for each tier, Badge for the recommended plan, and a Table for feature comparison.
+
+### Build an e-commerce product grid
+
+```
+/rayden-code product catalog with filters, search, and a card grid
+```
+
+**Use case:** You're building a storefront and need a responsive product grid with Chip filters, Input search, Pagination, and Cards with images — all using Rayden's layout and spacing rules.
 
 ## Best Practices
 

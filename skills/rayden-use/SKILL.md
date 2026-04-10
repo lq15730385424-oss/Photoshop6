@@ -37,29 +37,45 @@ Build and maintain Rayden UI components and screens directly in Figma using the 
 
 ## Examples
 
-### Build a component
+### Build a component with all variants
 
 ```
 /rayden-use Button https://figma.com/file/abc123
 ```
 
-Generates all Button variants (primary, secondary, grey, destructive) in solid and outlined appearances across SM and LG sizes.
+**Use case:** You're starting a new design system file and need the Button component with all variants (primary, secondary, grey, destructive) in solid and outlined appearances across SM and LG sizes.
 
-### Compose a dashboard screen
+### Design a SaaS dashboard
 
 ```
 /rayden-use dashboard-screen balanced https://figma.com/file/abc123
 ```
 
-Builds a full dashboard layout: sidebar navigation, header, KPI strip, data table, and activity feed — all using Rayden tokens.
+**Use case:** You're designing an analytics dashboard and need a sidebar layout with KPI cards, a data table, and an activity feed — all using consistent Rayden tokens and spacing.
 
-### Compose with expressive style
+### Build a marketing landing page
 
 ```
 /rayden-compose landing expressive https://figma.com/file/abc123
 ```
 
-Delegates to the screen composer subagent to build a landing page with bolder typography, stronger shadows, and more visual weight.
+**Use case:** You need a high-impact landing page with bolder typography, stronger shadows, and asymmetric layouts that avoid the generic "AI-generated" look.
+
+### Audit an existing design for compliance
+
+```
+/rayden-use audit https://figma.com/file/abc123
+```
+
+**Use case:** You have an existing Figma file and want to check that all colors match Rayden tokens, spacing is on the 4px grid, and radius is concentric.
+
+### Add variants to an existing component
+
+```
+/rayden-use add-variants Input https://figma.com/file/abc123
+```
+
+**Use case:** The Input component exists in your Figma file but is missing error and success states — the skill reads the existing structure and extends it.
 
 ## Best Practices
 
