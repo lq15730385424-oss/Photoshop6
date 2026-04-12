@@ -46,9 +46,10 @@ Map static React/HTML content to dynamic WordPress functions:
 - Replace static paths with `get_template_directory_uri()`.
 
 ### 3. Implementation of Core Hooks
-Ensure every template correctly integrates:
-- `get_header()`, `get_footer()`, `wp_head()`, and `wp_footer()`.
-- `register_nav_menus()` for dynamic navigation without breaking the original HTML structure.
+Ensure every theme includes the foundational WordPress hooks correctly:
+- **Layout Files (`header.php` / `footer.php`)**: Must include `wp_head()` before `</head>` and `wp_footer()` before `</body>`.
+- **Page Templates**: Must call `get_header()` and `get_footer()`.
+- `register_nav_menus()` for dynamic navigation without breaking original HTML structure.
 
 ### 4. Validation & Live Tracker
 Maintain a live tracker of Total Issues, Fixed, and Remaining. Every fix must be followed by a confirmation:
