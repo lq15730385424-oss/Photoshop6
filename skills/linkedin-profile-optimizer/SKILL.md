@@ -21,8 +21,8 @@ This skill helps professionals (founders, lecturers, IT experts, and agritech bu
 
 ## When to Use This Skill
 
-- Use when a need to optimize their **LinkedIn Profile** (Headline, About, Experience).
-- Use when a need a **Personal Brand Audit** or "roast" to identify weak credibility or generic wording.
+- Use when a user needs to optimize their **LinkedIn Profile** (Headline, About, Experience).
+- Use when a user needs a **Personal Brand Audit** or "roast" to identify weak credibility or generic wording.
 - Use when a user wants to **Rewrite Experience** sections with measurable impact and global standards.
 - Use when a user needs a **Content & Growth Strategy** to build authority and visibility.
 - Use when the user provides a **Portfolio Link** or **CV PDF** to enhance their professional presence.
