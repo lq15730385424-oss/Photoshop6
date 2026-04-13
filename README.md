@@ -106,6 +106,7 @@ For path details, prompt examples, and setup caveats by host, go to:
 - [Codex CLI skills](docs/users/codex-cli-skills.md)
 - [Gemini CLI skills](docs/users/gemini-cli-skills.md)
 - [AI agent skills guide](docs/users/ai-agent-skills.md)
+- [CCHub](https://github.com/Moresl/cchub) - A desktop control panel for the Claude Code / Codex / Gemini CLI ecosystem. Manage MCP servers, config profiles, agent skills, CLAUDE.md, hooks, and workflow templates from a single Tauri app (Windows / macOS / Linux).
 
 ## Quick FAQ
 
