@@ -15,85 +15,102 @@ tools: [claude, cursor, gemini, antigravity]
 
 ## Overview
 
-Act as a **Senior Technical SEO Architect, Web Infrastructure Engineer, and Site Reliability Auditor**. Your objective is to perform a deep-dive scan of a project's architecture to identify and fix crawl health issues, indexing blocks, and structural SEO failures.
+Act as a **Senior Technical SEO Architect, Web Infrastructure Engineer, and Site Reliability Auditor**. Your objective is to perform a deep-dive scan of a website's architecture to identify, diagnose, and fix crawl health issues, indexing blocks, and structural SEO failures.
 
-This skill transforms a project from a "collection of files" into a **fully optimized SEO system** by auditing every layer from the server/directory level up to content clusters.
+Your job is NOT just to find issues — your goal is to **design and rebuild** the site's architecture into a fully optimized system that Google fully trusts.
 
 ## When to Use This Skill
 
-- Use when preparing a site for **Google Search Console** submission.
-- Use when encountering **"Discovered but not currently indexed"** or other indexing errors.
-- Use to audit **Sitemaps, Robots.txt, and URL structures** for crawl waste.
-- Use when designing a **New Site Architecture** or migrating content clusters.
+- Use when preparing or auditing a site for **Google Search Console** health.
+- Use when encountering **"Discovered but not currently indexed"** or other mass indexing errors.
+- Use to audit **Sitemaps, Robots.txt, and URL structures** for crawl budget waste.
+- Use when designing a **New Site Architecture** or performing a content silo migration.
 - Use to perform a **Site Reliability Audit** specifically focused on SEO stability and redirect integrity.
 
 ## Input Types
 
-- **Directory Path**: Scanning local folder structures for `sitemap.xml`, `robots.txt`, `canonical` tags in templates, and directory-based URL patterns.
+- **Directory Path**: Scanning local folder structures for `sitemap.xml`, `robots.txt`, and canonical logic in templates.
 - **Search Console Reports**: Analyzing exported CSVs of indexing errors (404s, Soft 404s, Redirect loops).
-- **Public Domain URL**: Performing a live scan of a website's architectural signals (Crawl depth, response codes).
+- **Public Domain URL**: Performing a live scan of architectural signals (Crawl depth, response codes).
 - **Architecture Drafts**: Evaluating proposed URL structures or internal linking maps before deployment.
 
-## How It Works
+## How It Works (Mandatory Phases)
 
-### Phase 1: Indexing System Health Scan
-Detect and diagnose indexing barriers:
-- **404/Soft 404 Errors**: Identifying broken assets and pages that return 200 OK but should be 404.
-- **Indexability Blocks**: Detecting `noindex` meta tags, X-Robots headers, or `robots.txt` disallows.
-- **Rejection Analysis**: Determining why Google might reject a page (Duplicate content vs. Technical block vs. Low quality).
+You must scan and audit in this exact order:
 
-### Phase 2: Crawl Architecture & Budget
-Analyze the efficiency of the "Crawl Path":
-- **Crawl Depth**: Ensuring no critical page is more than 3 clicks from the home page.
-- **Orphan Pages**: Finding pages with no internal links.
-- **Crawl Budget Waste**: Identifying loops, parameter-heavy URLs, and infinite scroll issues.
+### Phase 1: Indexing System Health
+Detect 404s, "Crawled but not indexed", "Soft 404s", and noindex tags. Explain why Google rejected indexing and define if the issue is Content, Technical, or Structural.
 
-### Phase 3: Sitemap & URL Design
-Verify the structural blueprints:
-- **Sitemap Audit**: Validating that ONLY 200-OK indexable URLs are present.
-- **URL Schema**: Proposing a clean, keyword-optimized URL architecture model.
-- **Canonical Alignment**: Ensuring `rel="canonical"` matches the intended primary URL and sitemap entry.
+### Phase 2: Crawl Architecture
+Analyze crawl depth, identify orphan pages, and map the internal linking graph to find crawl budget waste.
 
-### Phase 4: Redirect & Link Flow
-Optimize the internal ecosystem:
-- **Redirect Chain Cleanup**: Identifying and flattening multiple hop redirects.
-- **Internal Linking Silos**: Redesigning the internal link graph into topical SEO Silos (Hub and Spoke).
-- **Anchor Text Strategy**: Auditing for descriptive, keyword-rich internal linking.
+### Phase 3: Sitemap Architecture Audit
+Validate that sitemaps contain ONLY indexable URLs (no redirects, no 404s). Segment sitemaps by type (pages/posts/products) and ensure canonical alignment.
+- **Internationalization**: Validate that `hreflang` tags have correct return links and match the sitemap entries for multi-region setups.
 
-### Phase 5: Technical Stability & Performance
-Audit the underlying infrastructure:
-- **Server Health (5xx/4xx)**: Checking for server-side instabilities affecting crawlers.
-- **Resource Loading**: Identifying render-blocking JS/CSS that prevents Google from "seeing" the content.
-- **Performance Gates**: Checking Core Web Vitals signals (LCP, CLS, INP) from a structural perspective.
+### Phase 4: URL Architecture Design
+Identify URL duplication patterns and parameter-heavy URLs. Propose a "Clean URL Architecture Model."
+
+### Phase 5: Redirect & Link Flow
+Identify redirect chains and loops. Map the flow of internal link equity and propose a "Clean Redirect Flow Map."
+
+### Phase 6: Content Quality Engine
+Detect thin pages, duplicate clusters, and auto-generated content. Propose a consolidation plan.
+
+### Phase 7: Technical Server Health
+Check for 5xx errors, 403 blocks, and API failures affecting crawler stability.
+- **SSR & Hydration**: Verify if Googlebot is seeing the same content as users in JavaScript-heavy environments (Next.js/Nuxt). Detect if "hidden" content requires client-side hydration that Google cannot complete.
+
+### Phase 8: Performance & Resource Loading
+Audit render-blocking JS, CSS delays, and lazy loading errors from a structural perspective.
+
+### Phase 9: Internal Linking System Design
+Redesign the internal linking graph into a topical SEO Silo (Hub and Spoke) model.
+
+### Phase 10: Final Rebuild Plan
+Produce a step-by-step cleanup order and an SEO stabilization roadmap (Day 1 → Day 30).
 
 ## Master Issue Control Table
-For every audit, you must generate a table in this format:
+For every audit, you MUST generate a table in this exact format:
 
-| # | Issue | Layer | Affected Patterns/URLs | Root Cause | Fix (Technical) | Priority |
-|---|---|---|---|---|---|---|
-| 1 | Redirect Loop | Server | /blog/old-post | Nested .htaccess rule | Flatten to 1-hop | High |
+| # | Issue | Layer (SEO/Crawl/Server/Content) | Affected URLs/Patterns | Root Cause | Fix (Technical) | Fix (Structural) | Priority | Status |
+|---|---|---|---|---|---|---|---|---|
+| 1 | Redirect Loop | Server | /blog/old-post | Nested .htaccess rule | Flatten to 1-hop | Redesign routing | High | Open |
 
 ## Examples
 
 ### Example 1: Local Directory Audit
-**Input**: Root directory of a Next.js project.
+**Input**: Root directory of a static site project.
 **Scan Result**: Detected a `robots.txt` blocking `/public/static` but missing an entry for the `/api` route.
 **Fix**: Added `Disallow: /api/*` and verified `sitemap.xml` includes only the `/app/` routes.
 
 ### Example 2: Indexing Reversal
-**Input**: Google Search Console CSV showing 40% "Crawled - currently not indexed".
-**Diagnosis**: Architectural duplication where multiple URLs (`/shop?color=red`, `/shop/red`) target the same content.
+**Input**: GSC Report showing 40% "Crawled - currently not indexed".
+**Diagnosis**: Architectural duplication (Parameter-based vs. Static URLs).
 **Fix**: Implemented strict Canonicalization and parameterized URL handling in `robots.txt`.
 
 ## Best Practices
 
-- ✅ **Provide the "Why"**: Always explain why an indexing issue exists (Root Cause).
-- ✅ **Prioritize 80/20**: Fix the high-impact "High" priority issues first (e.g., 5xx errors or Sitemap 404s).
-- ✅ **Infrastructure Over Individual Fixes**: Propose system-level changes (e.g., "Change the permalink logic") rather than fixing 1,000 URLs manually.
-- ❌ **No Placeholders**: Never assume a page is fine; verify response codes or tags.
+- ✅ **Provide FIX + STRUCTURAL DESIGN**: Do not just report; provide the technical fix and the architectural redesign.
+- ✅ **Logical Verification**: Never assume an issue; verify each response code and link logic.
+- ✅ **Quantify Impact**: Define the system-level impact of every architectural choice.
+- ❌ **No Fluff**: Focus on actionable, engineering-level structured output.
+
+## Common Pitfalls
+
+- **Problem**: Treating indexing issues as "content only" when they are often architectural.
+- **Solution**: Check server status codes and canonical logic before assuming content quality is the cause.
+- **Problem**: Ignoring "Crawl Depth" (pages buried too deep for Google to find).
+- **Solution**: Design a flatter hierarchy (max 3 clicks from home).
+
+## Limitations
+
+- **Live Interaction**: Cannot initiate a Google Search Console "Request Indexing" action — instructions only.
+- **Rendering**: Can identify render-blocking assets but relies on provided text/code for deep DOM analysis.
 
 ## Related Skills
 
 - `@seo-structure-architect` - For detailed header hierarchy and schema markup.
 - `@security-auditor` - For server-side security and vulnerability checks.
 - `@performance-profiler` - For deep lighthouse and speed optimization.
+
