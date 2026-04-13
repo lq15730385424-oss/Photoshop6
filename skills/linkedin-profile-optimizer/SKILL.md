@@ -117,21 +117,25 @@ Critically evaluate the existing profile like a global recruiter, high-level inv
 
 ## Examples
 
-### Example 1: Profile Audit (Verification Gate)
+### Example 1: Profile Verification Gate (Handle Only)
 
 **Input**: `whoisabhishekadhikari`
 
-**Agent Response (Hallucination Prevention)**:
-> "I see you've provided the handle `whoisabhishekadhikari`. To ensure I provide a 100% accurate audit without hallucinating details, I've attempted to fetch your public profile. [Agent confirms access OR asks: 'Could you please paste your current 'About' section or a PDF of your profile to ensure I have the latest data?']"
+**Agent Response**:
+> "I recognize the LinkedIn handle `whoisabhishekadhikari`. Before I perform an audit, I need to verify your current profile data. I have attempted to fetch your public profile [Link]. **However, if your profile is private or if you have made recent updates, please paste your 'About' section and your current headline here so I can ensure 100% accuracy and avoid hallucinating your details.**"
 
-**Audit Analysis (After Verification)**:
+### Example 2: Full Profile Audit (With Provided Text)
+
+**Input**: Handle `whoisabhishekadhikari` + the following profile text: "[User pastes About section describing roles as Founder, Lecturer, and IT Professional]"
+
+**Audit Analysis**:
 - **Identity**: Multi-faceted (Founder, Lecturer, IT Professional). Needs a "Red Thread" to unify these roles.
 - **Headline Recommendation**: *"IT Strategist & Agritech Founder | Transforming Agricultural Systems with Scalable Tech | Lecturer in Computer Science"*
 
-### Example 2: Before (Local CV Style)
+### Example 3: Before (Local CV Style)
 > "Lecturer at ABC College. Teaching IT subjects. Interested in agriculture."
 
-### Example 3: After (Global Authority)
+### Example 4: After (Global Authority)
 > "IT Strategist & Agritech Founder | Transforming Agricultural Systems with Scalable Tech | Lecturer in Computer Science"
 > *Result: Clear authority, multiple roles unified by tech/agritech focus, keyword-optimized.*
 
