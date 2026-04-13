@@ -157,7 +157,7 @@ Critically evaluate the existing profile like a global recruiter, high-level inv
 
 - **Live Data**: This skill cannot browse the live, private LinkedIn backend; it relies on text provided, public URLs, or PDF uploads.
 - **Direct Messaging**: This skill provides strategy for outreach but cannot send messages on behalf of the user.
-- **Visual Design**: While it provides brand guidance, it does not generate profile/banner images directly (suggest using `@image-generator` or similar).
+- **Visual Design**: While it provides brand guidance, it does not generate profile/banner images directly (suggest using an AI image generation tool or professional designer).
 
 ## Related Skills
 
