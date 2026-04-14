@@ -31,14 +31,14 @@ risk: safe
     <instruction>
       Classify before ingesting — never read raw:
 
-      - **Builds/Installs (pip, npm, make, docker):** `| tail -n 30`
+      - **Builds/Installs (pip, npm, make, docker):** `grep -A 10 -B 10 -iE "(error|fail|warn|fatal)"`
       - **Errors/Stacktraces (pytest, crashes, stderr):** `grep -A 10 -B 5 -iE "(error|exception|traceback|failed|assert)"`
       - **Large source files (>300 lines):** locate with `grep -n "def \|class "`, read with `view_range`.
       - **JSON/YAML payloads:** `jq 'keys'` or `head -n 40` before committing to full read.
       - **Files already read this session:** use cached in-context version. Do not re-read unless explicitly modified.
       - **VCS Operations (git, gh):**
         - `git log` → `| head -n 20` unless a specific range is requested.
-        - `git diff` >50 lines → `| grep -E "^(\+\+\+|---|@@|\+|-)" | head -n 60` to extract hunks only.
+        - `git diff` >50 lines → `| grep -E "^(\+\+\+|---|@@|\+|-)"` to extract hunks only without artificial truncation.
         - `git status` → read as-is.
         - `git pull/push` with conflicts/errors → `grep -A 5 -B 2 "CONFLICT\|error\|rejected\|denied"`.
         - `git log --graph` → `| head -n 40`.
@@ -76,3 +76,8 @@ risk: safe
   - No full git diff ingestion on large changesets — extract hunks only.
   - No git log beyond 20 entries unless a specific range is requested.
 </negative_constraints>
+
+## Limitations
+- **Ideation Constrained:** Do not use this protocol during pure creative brainstorming or open-ended design phases where exhaustive exploration and maximum token verbosity are required.
+- **Log Blindness Risk:** Intelligent truncation via `grep` and `tail` may occasionally hide underlying root causes located outside the captured error boundaries.
+- **Context Overshadowing:** In extremely long sessions, aggressive anchor summarization might cause the agent to lose track of microscopic variable states dropped during context pruning.

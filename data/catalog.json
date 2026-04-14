@@ -1,6 +1,6 @@
 {
   "generatedAt": "2026-02-08T00:00:00.000Z",
-  "total": 1381,
+  "total": 1409,
   "skills": [
     {
       "id": "00-andruia-consultant",
@@ -3148,6 +3148,30 @@
         "scenarios"
       ],
       "path": "skills/awt-e2e-testing/SKILL.md"
+    },
+    {
+      "id": "axiom",
+      "name": "axiom",
+      "description": "First-principles assumption auditor. Classifies each hidden assumption (fact / convention / belief / interest-driven), ranks by fragility × impact, and rebuilds conclusions from verified premises. Bilingual: auto-detects Chinese or English.",
+      "category": "general",
+      "tags": [
+        "axiom"
+      ],
+      "triggers": [
+        "axiom",
+        "first",
+        "principles",
+        "assumption",
+        "auditor",
+        "classifies",
+        "each",
+        "hidden",
+        "fact",
+        "convention",
+        "belief",
+        "interest"
+      ],
+      "path": "skills/axiom/SKILL.md"
     },
     {
       "id": "azd-deployment",
@@ -9007,6 +9031,33 @@
         "uncover"
       ],
       "path": "skills/codebase-cleanup-tech-debt/SKILL.md"
+    },
+    {
+      "id": "codebase-to-wordpress-converter",
+      "name": "codebase-to-wordpress-converter",
+      "description": "Expert skill for converting any codebase (React/HTML/Next.js) into a pixel-perfect, SEO-optimized, and dynamic WordPress theme.",
+      "category": "development",
+      "tags": [
+        "codebase",
+        "to",
+        "wordpress",
+        "converter"
+      ],
+      "triggers": [
+        "codebase",
+        "to",
+        "wordpress",
+        "converter",
+        "skill",
+        "converting",
+        "any",
+        "react",
+        "html",
+        "next",
+        "js",
+        "pixel"
+      ],
+      "path": "skills/codebase-to-wordpress-converter/SKILL.md"
     },
     {
       "id": "codex-review",
@@ -15971,6 +16022,36 @@
       "path": "skills/health-trend-analyzer/SKILL.md"
     },
     {
+      "id": "helium-mcp",
+      "name": "helium-mcp",
+      "description": "Connect to Helium's MCP server for news research, media bias analysis, balanced perspectives, stock/options data, and semantic meme search across 3.2M+ articles and 5,000+ sources",
+      "category": "data-ai",
+      "tags": [
+        "mcp",
+        "news",
+        "media-bias",
+        "stocks",
+        "options",
+        "finance",
+        "research"
+      ],
+      "triggers": [
+        "mcp",
+        "news",
+        "media-bias",
+        "stocks",
+        "options",
+        "finance",
+        "research",
+        "helium",
+        "connect",
+        "server",
+        "media",
+        "bias"
+      ],
+      "path": "skills/helium-mcp/SKILL.md"
+    },
+    {
       "id": "helm-chart-scaffolding",
       "name": "helm-chart-scaffolding",
       "description": "Comprehensive guidance for creating, organizing, and managing Helm charts for packaging and deploying Kubernetes applications.",
@@ -17278,6 +17359,34 @@
         "communication"
       ],
       "path": "skills/incident-runbook-templates/SKILL.md"
+    },
+    {
+      "id": "indexing-issue-auditor",
+      "name": "indexing-issue-auditor",
+      "description": "High-level technical SEO and site architecture auditor. Invoke to scan local or live environments for indexing, crawl budget, and structural errors.",
+      "category": "architecture",
+      "tags": [
+        "seo",
+        "architecture",
+        "indexing",
+        "crawler",
+        "sitemap"
+      ],
+      "triggers": [
+        "seo",
+        "architecture",
+        "indexing",
+        "crawler",
+        "sitemap",
+        "issue",
+        "auditor",
+        "high",
+        "level",
+        "technical",
+        "site",
+        "invoke"
+      ],
+      "path": "skills/indexing-issue-auditor/SKILL.md"
     },
     {
       "id": "infinite-gratitude",
@@ -18966,6 +19075,34 @@
       "path": "skills/linkedin-cli/SKILL.md"
     },
     {
+      "id": "linkedin-profile-optimizer",
+      "name": "linkedin-profile-optimizer",
+      "description": "High-intent expert for LinkedIn profile checks, authority building, and SEO optimization. Invoke to audit, rewrite, and enhance profiles for top 1% positioning.",
+      "category": "business",
+      "tags": [
+        "linkedin",
+        "branding",
+        "career",
+        "growth",
+        "personal-brand"
+      ],
+      "triggers": [
+        "linkedin",
+        "branding",
+        "career",
+        "growth",
+        "personal-brand",
+        "profile",
+        "optimizer",
+        "high",
+        "intent",
+        "checks",
+        "authority",
+        "building"
+      ],
+      "path": "skills/linkedin-profile-optimizer/SKILL.md"
+    },
+    {
       "id": "linkerd-patterns",
       "name": "linkerd-patterns",
       "description": "Production patterns for Linkerd service mesh - the lightweight, security-first service mesh for Kubernetes.",
@@ -20003,6 +20140,31 @@
       "path": "skills/malware-analyst/SKILL.md"
     },
     {
+      "id": "manage-skills",
+      "name": "manage-skills",
+      "description": "Discover, list, create, edit, toggle, copy, move, and delete AI agent skills across 11 tools (Cursor, Claude, Agents, Windsurf, Copilot, Codex, Cline, Aider, Continue, Roo Code, Augment)",
+      "category": "data-ai",
+      "tags": [
+        "manage",
+        "skills"
+      ],
+      "triggers": [
+        "manage",
+        "skills",
+        "discover",
+        "list",
+        "edit",
+        "toggle",
+        "copy",
+        "move",
+        "delete",
+        "ai",
+        "agent",
+        "11"
+      ],
+      "path": "skills/manage-skills/SKILL.md"
+    },
+    {
       "id": "manifest",
       "name": "manifest",
       "description": "Install and configure the Manifest observability plugin for your agents. Use when setting up telemetry, configuring API keys, or troubleshooting the plugin.",
@@ -20827,6 +20989,117 @@
         "multiple"
       ],
       "path": "skills/monorepo-management/SKILL.md"
+    },
+    {
+      "id": "monte-carlo-monitor-creation",
+      "name": "monte-carlo-monitor-creation",
+      "description": "Guides creation of Monte Carlo monitors via MCP tools, producing monitors-as-code YAML for CI/CD deployment.",
+      "category": "infrastructure",
+      "tags": [
+        "data-observability",
+        "monitoring",
+        "monte-carlo",
+        "monitors-as-code"
+      ],
+      "triggers": [
+        "data-observability",
+        "monitoring",
+        "monte-carlo",
+        "monitors-as-code",
+        "monte",
+        "carlo",
+        "monitor",
+        "creation",
+        "guides",
+        "monitors",
+        "via",
+        "mcp"
+      ],
+      "path": "skills/monte-carlo-monitor-creation/SKILL.md"
+    },
+    {
+      "id": "monte-carlo-prevent",
+      "name": "monte-carlo-prevent",
+      "description": "Surfaces Monte Carlo data observability context (table health, alerts, lineage, blast radius) before SQL/dbt edits.",
+      "category": "infrastructure",
+      "tags": [
+        "data-observability",
+        "dbt",
+        "schema",
+        "monte-carlo",
+        "lineage"
+      ],
+      "triggers": [
+        "data-observability",
+        "dbt",
+        "schema",
+        "monte-carlo",
+        "lineage",
+        "monte",
+        "carlo",
+        "prevent",
+        "surfaces",
+        "data",
+        "observability",
+        "context"
+      ],
+      "path": "skills/monte-carlo-prevent/SKILL.md"
+    },
+    {
+      "id": "monte-carlo-push-ingestion",
+      "name": "monte-carlo-push-ingestion",
+      "description": "Expert guide for pushing metadata, lineage, and query logs to Monte Carlo from any data warehouse.",
+      "category": "data-ai",
+      "tags": [
+        "data-observability",
+        "ingestion",
+        "monte-carlo",
+        "pycarlo",
+        "metadata"
+      ],
+      "triggers": [
+        "data-observability",
+        "ingestion",
+        "monte-carlo",
+        "pycarlo",
+        "metadata",
+        "monte",
+        "carlo",
+        "push",
+        "pushing",
+        "lineage",
+        "query",
+        "logs"
+      ],
+      "path": "skills/monte-carlo-push-ingestion/SKILL.md"
+    },
+    {
+      "id": "monte-carlo-validation-notebook",
+      "name": "monte-carlo-validation-notebook",
+      "description": "Generates SQL validation notebooks for dbt PR changes with before/after comparison queries.",
+      "category": "data-ai",
+      "tags": [
+        "data-observability",
+        "validation",
+        "dbt",
+        "monte-carlo",
+        "sql-notebook"
+      ],
+      "triggers": [
+        "data-observability",
+        "validation",
+        "dbt",
+        "monte-carlo",
+        "sql-notebook",
+        "monte",
+        "carlo",
+        "notebook",
+        "generates",
+        "sql",
+        "notebooks",
+        "pr"
+      ],
+      "path": "skills/monte-carlo-validation-notebook/SKILL.md"
     },
     {
       "id": "moodle-external-api-development",
@@ -24593,6 +24866,34 @@
       "path": "skills/pubmed-database/SKILL.md"
     },
     {
+      "id": "puzzle-activity-planner",
+      "name": "puzzle-activity-planner",
+      "description": "Plan puzzle-based activities for classrooms, parties, and events with pre-configured generator links",
+      "category": "architecture",
+      "tags": [
+        "education",
+        "puzzle",
+        "classroom",
+        "activity-planning",
+        "event"
+      ],
+      "triggers": [
+        "education",
+        "puzzle",
+        "classroom",
+        "activity-planning",
+        "event",
+        "activity",
+        "planner",
+        "plan",
+        "activities",
+        "classrooms",
+        "parties",
+        "events"
+      ],
+      "path": "skills/puzzle-activity-planner/SKILL.md"
+    },
+    {
       "id": "pydantic-ai",
       "name": "pydantic-ai",
       "description": "Build production-ready AI agents with PydanticAI — type-safe tool use, structured outputs, dependency injection, and multi-model support.",
@@ -25005,6 +25306,68 @@
         "optimization"
       ],
       "path": "skills/rag-implementation/SKILL.md"
+    },
+    {
+      "id": "rayden-code",
+      "name": "rayden-code",
+      "description": "Generate React code with Rayden UI components using correct props, tokens, and premium layout patterns",
+      "category": "development",
+      "tags": [
+        "react",
+        "tailwind",
+        "design-system",
+        "ui",
+        "components",
+        "vibe-coding",
+        "rayden",
+        "rayna-ui",
+        "code-generation"
+      ],
+      "triggers": [
+        "react",
+        "tailwind",
+        "design-system",
+        "ui",
+        "components",
+        "vibe-coding",
+        "rayden",
+        "rayna-ui",
+        "code-generation",
+        "code",
+        "generate",
+        "correct"
+      ],
+      "path": "skills/rayden-code/SKILL.md"
+    },
+    {
+      "id": "rayden-use",
+      "name": "rayden-use",
+      "description": "Build and maintain Rayden UI components and screens in Figma via Figma MCP with full design token enforcement",
+      "category": "general",
+      "tags": [
+        "figma",
+        "design-system",
+        "ui",
+        "components",
+        "mcp",
+        "rayden",
+        "rayna-ui"
+      ],
+      "triggers": [
+        "figma",
+        "design-system",
+        "ui",
+        "components",
+        "mcp",
+        "rayden",
+        "rayna-ui",
+        "maintain",
+        "screens",
+        "via",
+        "full",
+        "token"
+      ],
+      "path": "skills/rayden-use/SKILL.md"
     },
     {
       "id": "react-best-practices",
@@ -25955,7 +26318,7 @@
     {
       "id": "sales-automator",
       "name": "sales-automator",
-      "description": "Draft cold emails, follow-ups, and proposal templates. Creates\npricing pages, case studies, and sales scripts. Use PROACTIVELY for sales\noutreach or lead nurturing.",
+      "description": "Draft cold emails, follow-ups, and proposal templates. Creates pricing pages, case studies, and sales scripts. Use PROACTIVELY for sales outreach or lead nurturing.",
       "category": "business",
       "tags": [
         "sales",
@@ -28466,6 +28829,31 @@
         "skills"
       ],
       "path": "skills/skill-installer/SKILL.md"
+    },
+    {
+      "id": "skill-optimizer",
+      "name": "skill-optimizer",
+      "description": "Diagnose and optimize Agent Skills (SKILL.md) with real session data and research-backed static analysis. Works with Claude Code, Codex, and any Agent Skills-compatible agent.",
+      "category": "data-ai",
+      "tags": [
+        "skill",
+        "optimizer"
+      ],
+      "triggers": [
+        "skill",
+        "optimizer",
+        "diagnose",
+        "optimize",
+        "agent",
+        "skills",
+        "md",
+        "real",
+        "session",
+        "data",
+        "research",
+        "backed"
+      ],
+      "path": "skills/skill-optimizer/SKILL.md"
     },
     {
       "id": "skill-rails-upgrade",
@@ -31548,6 +31936,174 @@
       "path": "skills/typescript-pro/SKILL.md"
     },
     {
+      "id": "ui-a11y",
+      "name": "ui-a11y",
+      "description": "Audit a StyleSeed-based component or page for WCAG 2.2 AA issues and apply practical accessibility fixes where the code makes them safe.",
+      "category": "general",
+      "tags": [
+        "ui",
+        "accessibility",
+        "wcag",
+        "audit",
+        "styleseed"
+      ],
+      "triggers": [
+        "ui",
+        "accessibility",
+        "wcag",
+        "audit",
+        "styleseed",
+        "a11y",
+        "component",
+        "page",
+        "aa",
+        "issues",
+        "apply",
+        "practical"
+      ],
+      "path": "skills/ui-a11y/SKILL.md"
+    },
+    {
+      "id": "ui-component",
+      "name": "ui-component",
+      "description": "Generate a new UI component that follows StyleSeed Toss conventions for structure, tokens, accessibility, and component ergonomics.",
+      "category": "development",
+      "tags": [
+        "ui",
+        "components",
+        "design-system",
+        "frontend",
+        "styleseed"
+      ],
+      "triggers": [
+        "ui",
+        "components",
+        "design-system",
+        "frontend",
+        "styleseed",
+        "component",
+        "generate",
+        "new",
+        "follows",
+        "toss",
+        "conventions",
+        "structure"
+      ],
+      "path": "skills/ui-component/SKILL.md"
+    },
+    {
+      "id": "ui-page",
+      "name": "ui-page",
+      "description": "Scaffold a new mobile-first page using StyleSeed Toss layout patterns, section rhythm, and existing shell components.",
+      "category": "development",
+      "tags": [
+        "ui",
+        "page-design",
+        "mobile",
+        "layout",
+        "styleseed"
+      ],
+      "triggers": [
+        "ui",
+        "page-design",
+        "mobile",
+        "layout",
+        "styleseed",
+        "page",
+        "scaffold",
+        "new",
+        "first",
+        "toss",
+        "section",
+        "rhythm"
+      ],
+      "path": "skills/ui-page/SKILL.md"
+    },
+    {
+      "id": "ui-pattern",
+      "name": "ui-pattern",
+      "description": "Generate reusable UI patterns such as card sections, grids, lists, forms, and chart wrappers using StyleSeed Toss primitives.",
+      "category": "architecture",
+      "tags": [
+        "ui",
+        "patterns",
+        "design-system",
+        "reuse",
+        "styleseed"
+      ],
+      "triggers": [
+        "ui",
+        "patterns",
+        "design-system",
+        "reuse",
+        "styleseed",
+        "generate",
+        "reusable",
+        "such",
+        "card",
+        "sections",
+        "grids",
+        "lists"
+      ],
+      "path": "skills/ui-pattern/SKILL.md"
+    },
+    {
+      "id": "ui-review",
+      "name": "ui-review",
+      "description": "Review UI code for StyleSeed design-system compliance, accessibility, mobile ergonomics, spacing discipline, and implementation quality.",
+      "category": "security",
+      "tags": [
+        "ui",
+        "review",
+        "design-system",
+        "accessibility",
+        "styleseed"
+      ],
+      "triggers": [
+        "ui",
+        "review",
+        "design-system",
+        "accessibility",
+        "styleseed",
+        "code",
+        "compliance",
+        "mobile",
+        "ergonomics",
+        "spacing",
+        "discipline",
+        "quality"
+      ],
+      "path": "skills/ui-review/SKILL.md"
+    },
+    {
+      "id": "ui-setup",
+      "name": "ui-setup",
+      "description": "Interactive StyleSeed setup wizard for choosing app type, brand color, visual style, typography, and the first screen scaffold.",
+      "category": "development",
+      "tags": [
+        "ui",
+        "design-system",
+        "setup",
+        "frontend",
+        "styleseed"
+      ],
+      "triggers": [
+        "ui",
+        "design-system",
+        "setup",
+        "frontend",
+        "styleseed",
+        "interactive",
+        "wizard",
+        "choosing",
+        "app",
+        "type",
+        "brand",
+        "color"
+      ],
+      "path": "skills/ui-setup/SKILL.md"
+    },
+    {
       "id": "ui-skills",
       "name": "ui-skills",
       "description": "Opinionated, evolving constraints to guide agents when building interfaces",
@@ -31567,6 +32123,34 @@
         "interfaces"
       ],
       "path": "skills/ui-skills/SKILL.md"
+    },
+    {
+      "id": "ui-tokens",
+      "name": "ui-tokens",
+      "description": "List, add, and update StyleSeed design tokens while keeping JSON sources, CSS variables, and dark-mode values in sync.",
+      "category": "general",
+      "tags": [
+        "ui",
+        "tokens",
+        "design-system",
+        "theming",
+        "styleseed"
+      ],
+      "triggers": [
+        "ui",
+        "tokens",
+        "design-system",
+        "theming",
+        "styleseed",
+        "list",
+        "add",
+        "update",
+        "while",
+        "keeping",
+        "json",
+        "sources"
+      ],
+      "path": "skills/ui-tokens/SKILL.md"
     },
     {
       "id": "ui-ux-designer",
@@ -31959,6 +32543,118 @@
         "dependency"
       ],
       "path": "skills/uv-package-manager/SKILL.md"
+    },
+    {
+      "id": "ux-audit",
+      "name": "ux-audit",
+      "description": "Audit screens against Nielsen's heuristics and mobile UX best practices using the StyleSeed Toss design language as the implementation context.",
+      "category": "development",
+      "tags": [
+        "ux",
+        "audit",
+        "usability",
+        "mobile",
+        "styleseed"
+      ],
+      "triggers": [
+        "ux",
+        "audit",
+        "usability",
+        "mobile",
+        "styleseed",
+        "screens",
+        "against",
+        "nielsen",
+        "heuristics",
+        "toss",
+        "language",
+        "context"
+      ],
+      "path": "skills/ux-audit/SKILL.md"
+    },
+    {
+      "id": "ux-copy",
+      "name": "ux-copy",
+      "description": "Generate UX microcopy in StyleSeed's Toss-inspired voice for buttons, empty states, errors, toasts, confirmations, and form guidance.",
+      "category": "development",
+      "tags": [
+        "ux",
+        "copywriting",
+        "microcopy",
+        "frontend",
+        "styleseed"
+      ],
+      "triggers": [
+        "ux",
+        "copywriting",
+        "microcopy",
+        "frontend",
+        "styleseed",
+        "copy",
+        "generate",
+        "toss",
+        "inspired",
+        "voice",
+        "buttons",
+        "empty"
+      ],
+      "path": "skills/ux-copy/SKILL.md"
+    },
+    {
+      "id": "ux-feedback",
+      "name": "ux-feedback",
+      "description": "Add loading, empty, error, and success feedback states to StyleSeed components and pages with practical mobile-first rules.",
+      "category": "development",
+      "tags": [
+        "ux",
+        "states",
+        "loading",
+        "error-handling",
+        "styleseed"
+      ],
+      "triggers": [
+        "ux",
+        "states",
+        "loading",
+        "error-handling",
+        "styleseed",
+        "feedback",
+        "add",
+        "empty",
+        "error",
+        "success",
+        "components",
+        "pages"
+      ],
+      "path": "skills/ux-feedback/SKILL.md"
+    },
+    {
+      "id": "ux-flow",
+      "name": "ux-flow",
+      "description": "Design user flows and screen structure using StyleSeed UX patterns such as progressive disclosure, hub-and-spoke navigation, and information pyramids.",
+      "category": "architecture",
+      "tags": [
+        "ux",
+        "flows",
+        "navigation",
+        "product-design",
+        "styleseed"
+      ],
+      "triggers": [
+        "ux",
+        "flows",
+        "navigation",
+        "product-design",
+        "styleseed",
+        "flow",
+        "user",
+        "screen",
+        "structure",
+        "such",
+        "progressive",
+        "disclosure"
+      ],
+      "path": "skills/ux-flow/SKILL.md"
     },
     {
       "id": "ux-persuasion-engineer",
@@ -32560,6 +33256,33 @@
         "streaming"
       ],
       "path": "skills/voice-ai-engine-development/SKILL.md"
+    },
+    {
+      "id": "vscode-extension-guide-en",
+      "name": "vscode-extension-guide-en",
+      "description": "Guide for VS Code extension development from scaffolding to Marketplace publication",
+      "category": "development",
+      "tags": [
+        "vscode",
+        "extension",
+        "ide",
+        "typescript",
+        "marketplace"
+      ],
+      "triggers": [
+        "vscode",
+        "extension",
+        "ide",
+        "typescript",
+        "marketplace",
+        "en",
+        "vs",
+        "code",
+        "development",
+        "scaffolding",
+        "publication"
+      ],
+      "path": "skills/vscode-extension-guide-en/SKILL.md"
     },
     {
       "id": "vulnerability-scanner",
@@ -33183,6 +33906,34 @@
       "path": "skills/wordpress/SKILL.md"
     },
     {
+      "id": "wordpress-centric-high-seo-optimized-blogwriting-skill",
+      "name": "wordpress-centric-high-seo-optimized-blogwriting-skill",
+      "description": "Use this skill when the user asks to write a blog post, article, or SEO content. This applies a professional structure, truth boxes, click-bait-free accurate information, and outputs direct WordPress-ready content.",
+      "category": "business",
+      "tags": [
+        "writing",
+        "blog",
+        "seo",
+        "content",
+        "wordpress"
+      ],
+      "triggers": [
+        "writing",
+        "blog",
+        "seo",
+        "content",
+        "wordpress",
+        "centric",
+        "high",
+        "optimized",
+        "blogwriting",
+        "skill",
+        "user",
+        "asks"
+      ],
+      "path": "skills/wordpress-centric-high-seo-optimized-blogwriting-skill/SKILL.md"
+    },
+    {
       "id": "wordpress-penetration-testing",
       "name": "wordpress-penetration-testing",
       "description": "Assess WordPress installations for common vulnerabilities and WordPress 7.0 attack surfaces.",
@@ -33795,6 +34546,31 @@
         "compiler"
       ],
       "path": "skills/zeroize-audit/SKILL.md"
+    },
+    {
+      "id": "zipai-optimizer",
+      "name": "zipai-optimizer",
+      "description": "Behavioral protocol engineered for extreme AI agent token optimization, eliminating I/O noise via context-aware truncation and strict conciseness.",
+      "category": "data-ai",
+      "tags": [
+        "zipai",
+        "optimizer"
+      ],
+      "triggers": [
+        "zipai",
+        "optimizer",
+        "behavioral",
+        "protocol",
+        "engineered",
+        "extreme",
+        "ai",
+        "agent",
+        "token",
+        "optimization",
+        "eliminating",
+        "noise"
+      ],
+      "path": "skills/zipai-optimizer/SKILL.md"
     },
     {
       "id": "zod-validation-expert",

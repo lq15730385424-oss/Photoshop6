@@ -9,6 +9,220 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+### Fixed
+
+- Backfilled missing `## Limitations` sections across canonical skills and generated plugin mirrors, eliminating the repo-wide `missing_limitations` audit finding tracked by issue `#499`.
+- Added regression coverage for repo-wide limitations auditing and extended the section repair script plus contributor templates so future skill additions include explicit constraints.
+
+## [10.0.0] - 2026-04-13 - "Audit Skills, Protocols, and Web App Branding"
+
+> Installable skill library update for Claude Code, Cursor, Codex CLI, Gemini CLI, Antigravity, and related AI coding assistants.
+
+Start here:
+
+- Install: `npx antigravity-awesome-skills`
+- Choose your tool: [README -> Choose Your Tool](https://github.com/sickn33/antigravity-awesome-skills#choose-your-tool)
+- Best skills by tool: [README -> Best Skills By Tool](https://github.com/sickn33/antigravity-awesome-skills#best-skills-by-tool)
+- Bundles: [docs/users/bundles.md](https://github.com/sickn33/antigravity-awesome-skills/blob/main/docs/users/bundles.md)
+- Workflows: [docs/users/workflows.md](https://github.com/sickn33/antigravity-awesome-skills/blob/main/docs/users/workflows.md)
+
+This release folds in the current seven-PR maintenance batch: PR #500 refreshes the web app branding with a favicon bundle and header logo, PRs #503, #508, #509, #512, and #513 add new skills for LinkedIn authority building, first-principles assumption audits, indexing diagnosis, Helium MCP research workflows, and ZipAI protocol design, and PR #501 corrects author attribution on the WordPress SEO writing skill. It also includes the required maintainer follow-up on `main`: contributor syncing, canonical generated-file refresh, plugin mirror updates, and release-state cleanup before tagging `v10.0.0`.
+
+## New Skills
+
+- **linkedin-profile-optimizer** - improves LinkedIn positioning, profile structure, and SEO-oriented authority signals.
+- **axiom** - audits assumptions with a first-principles workflow to surface weak premises and stronger reframes.
+- **indexing-issue-auditor** - diagnoses crawlability and indexation blockers with a structured SEO debugging flow.
+- **helium-mcp** - uses the Helium MCP stack for news intelligence, media bias review, market data, options pricing, and semantic meme search.
+- **zipai-optimizer** - documents the ZipAI Protocol for calibrating agent behavior, orchestration, and optimization loops.
+
+## Improvements
+
+- **web-app branding refresh** - adds the favicon bundle and updated header logo shipped in PR #500.
+- **author metadata correction** - normalizes the author name for `wordpress-centric-high-seo-optimized-blogwriting-skill` as merged in PR #501.
+- **canonical release-state sync** - regenerates catalog, plugin compatibility, mirrored plugin skill copies, docs counts, sitemap assets, and backup artifacts on `main` before the release cut.
+
+## Who should care
+
+- **SEO and growth operators** get two new audit-oriented skills for LinkedIn authority building and indexing diagnostics instead of piecing together generic marketing prompts.
+- **Agent designers and evaluators** get new workflows for first-principles assumption review and ZipAI-style protocol optimization.
+- **Researchers and market-intelligence users** get a Helium MCP skill that packages news, bias, pricing, and semantic search workflows into one installable unit.
+- **Maintainers and plugin users** get refreshed web branding plus regenerated plugin mirrors and catalog artifacts aligned with the merged source state.
+
+## Credits
+
+- **[@hazemezz123](https://github.com/hazemezz123)** for the web app branding contribution merged in PR #500.
+- **[@WHOISABHISHEKADHIKARI](https://github.com/WHOISABHISHEKADHIKARI)** for the author metadata correction in PR #501 and the `linkedin-profile-optimizer` and `indexing-issue-auditor` contributions merged in PRs #503 and #509.
+- **[@zhangyanxs](https://github.com/zhangyanxs)** for the `axiom` contribution merged in PR #508.
+- **[@connerlambden](https://github.com/connerlambden)** for the `helium-mcp` contribution merged in PR #512.
+- **[@nickdesi](https://github.com/nickdesi)** for the `zipai-optimizer` contribution merged in PR #513.
+
+## [9.13.0] - 2026-04-12 - "WordPress Builders, VS Code Extensions, and Security Review"
+
+> Installable skill library update for Claude Code, Cursor, Codex CLI, Gemini CLI, Antigravity, and related AI coding assistants.
+
+Start here:
+
+- Install: `npx antigravity-awesome-skills`
+- Choose your tool: [README -> Choose Your Tool](https://github.com/sickn33/antigravity-awesome-skills#choose-your-tool)
+- Best skills by tool: [README -> Best Skills By Tool](https://github.com/sickn33/antigravity-awesome-skills#best-skills-by-tool)
+- Bundles: [docs/users/bundles.md](https://github.com/sickn33/antigravity-awesome-skills/blob/main/docs/users/bundles.md)
+- Workflows: [docs/users/workflows.md](https://github.com/sickn33/antigravity-awesome-skills/blob/main/docs/users/workflows.md)
+
+This release merges PRs #492, #494, #495, and #496 to expand the library with WordPress-focused writing and migration workflows, a VS Code extension development guide, and stronger `security-auditor` instructions for IDOR and data-flow tracing. It also includes the required maintainer follow-up on `main`: contributor syncing, README source-credit coverage for the new community-sourced VS Code skill, and the canonical post-merge state before tagging `v9.13.0`.
+
+## New Skills
+
+- **wordpress-centric-high-seo-optimized-blogwriting-skill** - writes WordPress-ready SEO blog posts with schema, truth boxes, image metadata, and anti-hallucination rules.
+- **codebase-to-wordpress-converter** - converts React, HTML, or Next.js frontends into pixel-locked WordPress themes with phased audit and ACF mapping guidance.
+- **vscode-extension-guide-en** - covers the VS Code extension lifecycle from scaffolding and packaging to TreeView, webview, testing, and Marketplace publication.
+
+## Improvements
+
+- **security-auditor hardening** - adds explicit IDOR analysis, data-flow tracing, middleware choke-point validation, and SSRF/DNS-rebinding reminders to the existing security audit workflow.
+- **README source-credit alignment** - keeps `lewiswigmore/agent-skills` reflected in community-source credits so `check:readme-credits` passes for the merged VS Code guide contribution.
+- **Maintainer merge hygiene** - records the fork-run approval, PR-body normalization, contributor sync, and post-merge follow-up required to land this four-PR batch cleanly on `main`.
+
+## Who should care
+
+- **WordPress builders and content teams** get one skill for publishing SEO-focused articles and another for migrating production frontends into editable WordPress themes without layout drift.
+- **VS Code extension authors** get a dedicated English-language guide for packaging, testing, TreeView/webview work, and Marketplace release prep.
+- **Security reviewers and maintainers** get a sharper `security-auditor` skill plus a release trail that preserves contributor credit and README source attribution.
+
+## Credits
+
+- **[@derricke](https://github.com/derricke)** for the `security-auditor` update merged in PR #492.
+- **[@WHOISABHISHEKADHIKARI](https://github.com/WHOISABHISHEKADHIKARI)** for the two WordPress skills merged in PRs #494 and #495.
+- **[@sebastiondev](https://github.com/sebastiondev)** for the `vscode-extension-guide-en` contribution merged in PR #496.
+- **[lewiswigmore/agent-skills](https://github.com/lewiswigmore/agent-skills)** for the upstream VS Code extension guide source material.
+
+## [9.12.0] - 2026-04-11 - "Rayden UI, Puzzle Planning, and Skill Diagnostics"
+
+> Installable skill library update for Claude Code, Cursor, Codex CLI, Gemini CLI, Antigravity, and related AI coding assistants.
+
+Start here:
+
+- Install: `npx antigravity-awesome-skills`
+- Choose your tool: [README -> Choose Your Tool](https://github.com/sickn33/antigravity-awesome-skills#choose-your-tool)
+- Best skills by tool: [README -> Best Skills By Tool](https://github.com/sickn33/antigravity-awesome-skills#best-skills-by-tool)
+- Bundles: [docs/users/bundles.md](https://github.com/sickn33/antigravity-awesome-skills/blob/main/docs/users/bundles.md)
+- Workflows: [docs/users/workflows.md](https://github.com/sickn33/antigravity-awesome-skills/blob/main/docs/users/workflows.md)
+
+This release merges PRs #487 through #490 to expand the library with Rayden UI build workflows, puzzle activity planning, and skill-diagnostic analysis, while also repairing malformed YAML in `sales-automator`. It includes the required maintainer follow-up on `main`: PR metadata normalization for forked runs, README source-credit fixes, contributor syncing, and the canonical post-merge repository-state refresh before tagging `v9.12.0`.
+
+## New Skills
+
+- **rayden-code** - generates React + Tailwind code using the Rayden UI component system, token rules, and layout patterns.
+- **rayden-use** - builds and audits Rayden UI components and screens in Figma through the Figma MCP with token enforcement.
+- **puzzle-activity-planner** - creates classroom, party, and event puzzle plans with generator-ready links and prep checklists.
+- **skill-optimizer** - diagnoses skill quality with session-data analysis and static checks across trigger quality, workflow fit, and token economics.
+
+## Improvements
+
+- **sales-automator stability** - repairs malformed YAML in `skills/sales-automator/SKILL.md` so the skill validates cleanly again.
+- **Fork PR merge hygiene** - records the maintainer flow used to normalize PR bodies, refresh stale `pull_request` metadata, approve forked workflow runs, and keep source-only community merges moving.
+- **README credit and contributor sync** - keeps community-source acknowledgements and repo contributor listings aligned immediately after each squash merge on `main`.
+
+## Who should care
+
+- **Frontend and design-system users** get a matched Rayden UI pair for code generation and Figma execution across React and design workflows.
+- **Educators, facilitators, and event organizers** get a dedicated planning skill for puzzle-driven activities instead of piecing together ad hoc prompts.
+- **Maintainers and skill-library curators** get a new diagnostic skill for spotting underperforming skills and a verified release path for a four-PR community batch.
+
+## Credits
+
+- **[@playbookTV](https://github.com/playbookTV)** for the Rayden UI skill contribution merged in PR #487.
+- **[@fruitwyatt](https://github.com/fruitwyatt)** for the `puzzle-activity-planner` contribution merged in PR #488.
+- **[@htafolla](https://github.com/htafolla)** for the `sales-automator` YAML repair merged in PR #489.
+- **[@hqhq1025](https://github.com/hqhq1025)** for the `skill-optimizer` contribution merged in PR #490.
+- **[playbookTV/rayden-ui-design-skill](https://github.com/playbookTV/rayden-ui-design-skill)** for the upstream Rayden UI source material.
+- **[fruitwyatt/puzzle-activity-planner](https://github.com/fruitwyatt/puzzle-activity-planner)** for the upstream puzzle-planning source material.
+- **[hqhq1025/skill-optimizer](https://github.com/hqhq1025/skill-optimizer)** for the upstream skill-diagnostics source material.
+
+## [9.11.0] - 2026-04-09 - "Monte Carlo Skills and Cross-Tool Skill Management"
+
+> Installable skill library update for Claude Code, Cursor, Codex CLI, Gemini CLI, Antigravity, and related AI coding assistants.
+
+Start here:
+
+- Install: `npx antigravity-awesome-skills`
+- Choose your tool: [README -> Choose Your Tool](https://github.com/sickn33/antigravity-awesome-skills#choose-your-tool)
+- Best skills by tool: [README -> Best Skills By Tool](https://github.com/sickn33/antigravity-awesome-skills#best-skills-by-tool)
+- Bundles: [docs/users/bundles.md](https://github.com/sickn33/antigravity-awesome-skills/blob/main/docs/users/bundles.md)
+- Workflows: [docs/users/workflows.md](https://github.com/sickn33/antigravity-awesome-skills/blob/main/docs/users/workflows.md)
+
+This release merges PR #481 and PR #482 to expand the library in two directions: data observability workflows for Monte Carlo users and cross-tool skill maintenance guidance for teams operating across multiple agent coding environments. It also carries the required maintainer follow-up on `main`, including contributor syncing, README source-credit coverage, and canonical post-merge repository hygiene before the release cut.
+
+## New Skills
+
+- **monte-carlo-prevent** - checks table health, alerts, lineage, and blast radius before SQL or dbt edits.
+- **monte-carlo-monitor-creation** - guides monitor creation through the Monte Carlo MCP server and outputs monitors-as-code YAML.
+- **monte-carlo-push-ingestion** - documents metadata, lineage, and query-log ingestion into Monte Carlo across multiple warehouse patterns.
+- **monte-carlo-validation-notebook** - generates SQL validation notebook workflows for dbt pull request changes with before/after comparisons.
+- **manage-skills** - teaches agents how to discover, create, edit, toggle, copy, move, and delete skills across 11 major coding-agent tools.
+
+## Improvements
+
+- **README source-credit coverage** - keeps `monte-carlo-data/mc-agent-toolkit` and `umutbozdag/agent-skills-manager` reflected in community-source credits on `main`.
+- **Maintainer merge hygiene** - records the GitHub-only squash merge path, contributor sync, PR metadata refresh, and post-merge repository-state follow-up used for these community contributions.
+
+## Who should care
+
+- **Monte Carlo and dbt users** get a focused set of observability skills for impact analysis, monitor setup, ingestion pipelines, and validation-notebook workflows.
+- **Claude Code, Cursor, Codex CLI, Gemini CLI, and other agent-tool users** get one portable skill for managing skill inventories across mixed toolchains instead of maintaining separate ad hoc instructions per tool.
+- **Maintainers and source curators** get the merged upstream attribution and contributor credit trail captured cleanly in both the README and release notes.
+
+## Credits
+
+- **[@cryptoque](https://github.com/cryptoque)** for the Monte Carlo contribution merged in PR #481.
+- **[@umutbozdag](https://github.com/umutbozdag)** for the `manage-skills` contribution merged in PR #482.
+- **[monte-carlo-data/mc-agent-toolkit](https://github.com/monte-carlo-data/mc-agent-toolkit)** for the upstream Monte Carlo skill source material.
+- **[umutbozdag/agent-skills-manager](https://github.com/umutbozdag/agent-skills-manager)** for the upstream cross-tool skill-management source material.
+
+## [9.10.0] - 2026-04-08 - "StyleSeed UI and UX Pack"
+
+> Installable skill library update for Claude Code, Cursor, Codex CLI, Gemini CLI, Antigravity, and related AI coding assistants.
+
+Start here:
+
+- Install: `npx antigravity-awesome-skills`
+- Choose your tool: [README -> Choose Your Tool](https://github.com/sickn33/antigravity-awesome-skills#choose-your-tool)
+- Best skills by tool: [README -> Best Skills By Tool](https://github.com/sickn33/antigravity-awesome-skills#best-skills-by-tool)
+- Bundles: [docs/users/bundles.md](https://github.com/sickn33/antigravity-awesome-skills/blob/main/docs/users/bundles.md)
+- Workflows: [docs/users/workflows.md](https://github.com/sickn33/antigravity-awesome-skills/blob/main/docs/users/workflows.md)
+
+This release merges PR #479 to add an 11-skill StyleSeed-derived UI and UX pack sourced from `bitjaru/styleseed`. It expands the library with design-aware setup, component and page scaffolding, token management, accessibility review, UX audit flows, and feedback-state guidance, then carries the required README source-credit and maintainer follow-up state on `main`.
+
+## New Skills
+
+- **ui-setup** - interactive design-setup guidance for color, typography, and concept selection before generating the first page.
+- **ui-component** - component generation patterns aligned with shared design rules and visual consistency constraints.
+- **ui-page** - mobile-first page scaffolding guidance for layout structure, content hierarchy, and section composition.
+- **ui-pattern** - reusable UI pattern composition for grids, tables, cards, and similar building blocks.
+- **ui-review** - design-system review guidance for catching inconsistent spacing, typography, and component usage.
+- **ui-tokens** - design-token management guidance for evolving colors, type, spacing, and semantic system values.
+- **ui-a11y** - WCAG 2.2 AA-oriented accessibility review patterns for UI implementation.
+- **ux-flow** - user-flow design guidance for progressive disclosure and information architecture decisions.
+- **ux-audit** - heuristic UX audit workflow based on Nielsen-style evaluation criteria.
+- **ux-copy** - UX microcopy guidance for controls, errors, empty states, and concise interface text.
+- **ux-feedback** - loading, empty, error, and success-state guidance for resilient UI behavior.
+
+## Improvements
+
+- **README source-credit coverage** - keeps `bitjaru/styleseed` credited under community contributors so the merged source metadata and public acknowledgements stay aligned.
+- **Maintainer post-merge hygiene** - records the GitHub-only squash merge path for issue #478 / PR #479 and keeps `main` ready for the release cut immediately after merge.
+
+## Who should care
+
+- **Design-aware frontend builders** get a focused pack for turning UI prompts into more coherent setup, page, component, and pattern guidance.
+- **Teams improving UX quality** get new skills for accessibility review, heuristic audits, flows, microcopy, and feedback states.
+- **Maintainers and source curators** get the merged upstream attribution reflected cleanly in both the README and release trail.
+
+## Credits
+
+- **[@bitjaru](https://github.com/bitjaru)** for opening issue #478 and surfacing the StyleSeed skill pack request.
+- **[bitjaru/styleseed](https://github.com/bitjaru/styleseed)** for the upstream StyleSeed source material reflected in this release.
+
 ## [9.9.0] - 2026-04-07 - "Vibeship Restore and Community Merge Batch"
 
 > Installable skill library update for Claude Code, Cursor, Codex CLI, Gemini CLI, Antigravity, and related AI coding assistants.
