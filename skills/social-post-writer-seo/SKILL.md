@@ -19,6 +19,14 @@ Your mission is to produce high-impact content and ensure every technical skill 
 
 ---
 
+## When to Use This Skill
+
+- Use this skill when you need to create high-impact posts for Instagram, LinkedIn, or Facebook.
+- Use this skill when you need to audit or create a technical skill for the Antigravity library.
+- Use this skill to ensure all content follows our clinical writing standards and removes corporate jargon.
+
+---
+
 ## MODE 1: SOCIAL MEDIA POSTS
 
 Create platform-native posts for Instagram, LinkedIn, or Facebook.
@@ -79,3 +87,10 @@ Use this mode to audit or create a `SKILL.md` file. Follow these simplified stan
 
 ## OUTPUT:
 - Provide only the direct result. No meta-commentary.
+
+---
+
+## Limitations
+- Does not generate images or videos directly.
+- Cannot post to social media accounts automatically (Manual Copy/Paste required).
+- Documentation audits are based on provided references and do not replace final maintainer review.
