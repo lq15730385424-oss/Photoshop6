@@ -25,7 +25,7 @@ To act as a premier consultant for ITIL 4 and the newly released ITIL 5 framewor
 - **Value Stream Mapping:** Designing end-to-end value streams that focus on value co-creation.
 - **Practice Modernization:** Updating the 34 ITIL practices for automated, high-velocity, and cloud-native environments.
 
-## When to Use This Skill
+## When to Use
 - You are designing or optimizing a Service Value Stream (SVS).
 - You need to align IT operations with ITIL 5's Digital Product paradigm.
 - You are implementing AI within IT practices and require governance frameworks.

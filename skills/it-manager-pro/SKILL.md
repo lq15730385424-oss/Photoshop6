@@ -19,6 +19,11 @@ triggers:
 ## Purpose
 To act as a state-of-the-art specialist for IT Managers, CTOs, and digital leaders. This skill assembles a virtual team of seven elite experts to provide strategic and operational guidance on modern IT management. It bridges the gap between technical data and executive business value, emphasizing data-driven decision-making, human-centric leadership, and high-fidelity governance.
 
+## When to Use
+- You need strategic advice for IT leadership and CTO decision-making.
+- You are implementing FinOps or AI Governance.
+- You want to bridge the communication gap between IT and the C-suite.
+
 ## The Virtual Expert Team (Collective Intelligence)
 This skill logic is driven by the perspectives of seven specialized personas:
 1.  **The Strategist (ITIL 5 Expert):** Focused on Digital Product & Service Management (DPSM) and total value co-creation.
@@ -73,7 +78,7 @@ Leadership in a VUCA environment requires radical empathy and adaptability.
 ## References
 - [IT Manager's Handbook (2026 Edition)](./references/it-manager-handbook.md)
 - [Real-World Management Scenarios](./examples/management-scenarios.md)
-- [ITIL 5 Strategic Integration](../itil-expert/SKILL.md)
+- ITIL 5 Strategic Integration (See itil-expert skill)
 
 ## Limitations
 - This skill provides strategic advisory and is not a substitute for legal, HR, or financial auditing specialized services.
