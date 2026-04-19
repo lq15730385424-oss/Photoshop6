@@ -2,7 +2,7 @@
 
 Generated at: 2026-02-08T00:00:00.000Z
 
-Total skills: 1423
+Total skills: 1426
 
 ## architecture (95)
 
@@ -104,7 +104,7 @@ Total skills: 1423
 | `workflow-patterns` | Use this skill when implementing tasks according to Conductor's TDD workflow, handling phase checkpoints, managing git commits for tasks, or understanding th... |  | skill, implementing, tasks, according, conductor, tdd, handling, phase, checkpoints, managing, git, commits |
 | `zapier-make-patterns` | No-code automation democratizes workflow building. Zapier and Make (formerly Integromat) let non-developers automate business processes without writing code.... | zapier, make | zapier, make, no, code, automation, democratizes, building, formerly, integromat, let, non, developers |
 
-## business (78)
+## business (81)
 
 | Skill | Description | Tags | Triggers |
 | --- | --- | --- | --- |
@@ -131,6 +131,7 @@ Total skills: 1423
 | `growth-engine` | Motor de crescimento para produtos digitais -- growth hacking, SEO, ASO, viral loops, email marketing, CRM, referral programs e aquisicao organica. | growth, seo, marketing, viral, acquisition | growth, seo, marketing, viral, acquisition, engine, motor, de, crescimento, para, produtos, digitais |
 | `hr-pro` | Professional, ethical HR partner for hiring, onboarding/offboarding, PTO and leave, performance, compliant policies, and employee relations. | hr | hr, pro, professional, ethical, partner, hiring, onboarding, offboarding, pto, leave, performance, compliant |
 | `keyword-extractor` | Extracts up to 50 highly relevant SEO keywords from text. Use when user wants to generate or extract keywords for given text. | keyword, extractor | keyword, extractor, extracts, up, 50, highly, relevant, seo, keywords, text, user, wants |
+| `kotler-macro-analyzer` | Professional PESTEL/SWOT analysis agent based on Kotler's methodology for strategic market audits. | marketing, economics, strategy, kotler, pestel | marketing, economics, strategy, kotler, pestel, macro, analyzer, professional, swot, analysis, agent, methodology |
 | `launch-strategy` | You are an expert in SaaS product launches and feature announcements. Your goal is to help users plan launches that build momentum, capture attention, and co... | launch | launch, saas, product, launches, feature, announcements, goal, users, plan, momentum, capture, attention |
 | `leiloeiro-juridico` | Analise juridica de leiloes: nulidades, bem de familia, alienacao fiduciaria, CPC arts 829-903, Lei 9514/97, onus reais, embargos e jurisprudencia. | legal, auction-law, brazilian, judicial | legal, auction-law, brazilian, judicial, leiloeiro, juridico, analise, juridica, de, leiloes, nulidades, bem |
 | `linkedin-cli` | Use when automating LinkedIn via CLI: fetch profiles, search people/companies, send messages, manage connections, create posts, and Sales Navigator. | linkedin, cli | linkedin, cli, automating, via, fetch, profiles, search, people, companies, send, messages, connections |
@@ -142,6 +143,7 @@ Total skills: 1423
 | `notion-template-business` | Expert in building and selling Notion templates as a business - not just making templates, but building a sustainable digital product business. Covers templa... | notion, business | notion, business, building, selling, just, making, sustainable, digital, product, covers, pricing, marketplaces |
 | `odoo-ecommerce-configurator` | Expert guide for Odoo eCommerce and Website: product catalog, payment providers, shipping methods, SEO, and order-to-fulfillment workflow. | odoo, ecommerce, configurator | odoo, ecommerce, configurator, website, product, catalog, payment, providers, shipping, methods, seo, order |
 | `odoo-hr-payroll-setup` | Expert guide for Odoo HR and Payroll: salary structures, payslip rules, leave policies, employee contracts, and payroll journal entries. | odoo, hr, payroll, setup | odoo, hr, payroll, setup, salary, structures, payslip, rules, leave, policies, employee, contracts |
+| `osterwalder-canvas-architect` | Iterative consultant agent for building and validating logically consistent 9-block Business Model Canvases. | business-model, osterwalder, strategy, bmc | business-model, osterwalder, strategy, bmc, canvas, architect, iterative, consultant, agent, building, validating, logically |
 | `paid-ads` | You are an expert performance marketer with direct access to ad platform accounts. Your goal is to help create, optimize, and scale paid advertising campaign... | paid, ads | paid, ads, performance, marketer, direct, access, ad, platform, accounts, goal, optimize, scale |
 | `pricing-strategy` | Design pricing, packaging, and monetization strategies based on value, customer willingness to pay, and growth objectives. | pricing | pricing, packaging, monetization, value, customer, willingness, pay, growth, objectives |
 | `product-design` | Design de produto nivel Apple — sistemas visuais, UX flows, acessibilidade, linguagem visual proprietaria, design tokens, prototipagem e handoff. Cobre Figma... | design, ux, design-systems, accessibility, figma | design, ux, design-systems, accessibility, figma, product, de, produto, nivel, apple, sistemas, visuais |
@@ -176,6 +178,7 @@ Total skills: 1423
 | `seo-snippet-hunter` | Formats content to be eligible for featured snippets and SERP features. Creates snippet-optimized content blocks based on best practices. Use PROACTIVELY for... | seo, snippet, hunter | seo, snippet, hunter, formats, content, eligible, featured, snippets, serp, features, creates, optimized |
 | `seo-structure-architect` | Analyzes and optimizes content structure including header hierarchy, suggests schema markup, and internal linking opportunities. Creates search-friendly cont... | seo, structure | seo, structure, architect, analyzes, optimizes, content, including, header, hierarchy, suggests, schema, markup |
 | `social-content` | You are an expert social media strategist with direct access to a scheduling platform that publishes to all major social networks. Your goal is to help creat... | social, content | social, content, media, strategist, direct, access, scheduling, platform, publishes, all, major, networks |
+| `social-post-writer-seo` | Social Media Strategist and Content Writer. Creates clear, engaging social media posts for Instagram, LinkedIn, and Facebook. | social, post, writer, seo | social, post, writer, seo, media, strategist, content, creates, clear, engaging, posts, instagram |
 | `startup-analyst` | Expert startup business analyst specializing in market sizing, financial modeling, competitive analysis, and strategic planning for early-stage companies. | startup, analyst | startup, analyst, business, specializing, market, sizing, financial, modeling, competitive, analysis, strategic, planning |
 | `startup-business-analyst-business-case` | Generate comprehensive investor-ready business case document with market, solution, financials, and strategy | startup, business, analyst, case | startup, business, analyst, case, generate, investor, document, market, solution, financials |
 | `startup-business-analyst-financial-projections` | Create detailed 3-5 year financial model with revenue, costs, cash flow, and scenarios | startup, business, analyst, financial, projections | startup, business, analyst, financial, projections, detailed, year, model, revenue, costs, cash, flow |

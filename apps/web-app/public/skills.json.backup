@@ -16488,6 +16488,28 @@
     }
   },
   {
+    "id": "kotler-macro-analyzer",
+    "path": "skills/kotler-macro-analyzer",
+    "category": "business-strategy",
+    "name": "kotler-macro-analyzer",
+    "description": "Professional PESTEL/SWOT analysis agent based on Kotler's methodology for strategic market audits.",
+    "risk": "safe",
+    "source": "self",
+    "date_added": "2026-04-17",
+    "plugin": {
+      "targets": {
+        "codex": "supported",
+        "claude": "supported"
+      },
+      "setup": {
+        "type": "none",
+        "summary": "",
+        "docs": null
+      },
+      "reasons": []
+    }
+  },
+  {
     "id": "kotlin-coroutines-expert",
     "path": "skills/kotlin-coroutines-expert",
     "category": "development",
@@ -20911,6 +20933,28 @@
     "risk": "safe",
     "source": "https://github.com/jackjin1997/ClawForge",
     "date_added": "2026-02-27",
+    "plugin": {
+      "targets": {
+        "codex": "supported",
+        "claude": "supported"
+      },
+      "setup": {
+        "type": "none",
+        "summary": "",
+        "docs": null
+      },
+      "reasons": []
+    }
+  },
+  {
+    "id": "osterwalder-canvas-architect",
+    "path": "skills/osterwalder-canvas-architect",
+    "category": "business-strategy",
+    "name": "osterwalder-canvas-architect",
+    "description": "Iterative consultant agent for building and validating logically consistent 9-block Business Model Canvases.",
+    "risk": "safe",
+    "source": "self",
+    "date_added": "2026-04-17",
     "plugin": {
       "targets": {
         "codex": "supported",
@@ -26359,6 +26403,28 @@
     "risk": "critical",
     "source": "community",
     "date_added": "2026-03-06",
+    "plugin": {
+      "targets": {
+        "codex": "supported",
+        "claude": "supported"
+      },
+      "setup": {
+        "type": "none",
+        "summary": "",
+        "docs": null
+      },
+      "reasons": []
+    }
+  },
+  {
+    "id": "social-post-writer-seo",
+    "path": "skills/social-post-writer-seo",
+    "category": "growth",
+    "name": "social-post-writer-seo",
+    "description": "Social Media Strategist and Content Writer. Creates clear, engaging social media posts for Instagram, LinkedIn, and Facebook.",
+    "risk": "safe",
+    "source": "self",
+    "date_added": "2026-04-17",
     "plugin": {
       "targets": {
         "codex": "supported",

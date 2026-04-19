@@ -14257,6 +14257,25 @@
       "runtime_files": []
     },
     {
+      "id": "kotler-macro-analyzer",
+      "path": "skills/kotler-macro-analyzer",
+      "targets": {
+        "codex": "supported",
+        "claude": "supported"
+      },
+      "setup": {
+        "type": "none",
+        "summary": "",
+        "docs": null
+      },
+      "reasons": [],
+      "blocked_reasons": {
+        "codex": [],
+        "claude": []
+      },
+      "runtime_files": []
+    },
+    {
       "id": "kotlin-coroutines-expert",
       "path": "skills/kotlin-coroutines-expert",
       "targets": {
@@ -18154,6 +18173,25 @@
     {
       "id": "oss-hunter",
       "path": "skills/oss-hunter",
+      "targets": {
+        "codex": "supported",
+        "claude": "supported"
+      },
+      "setup": {
+        "type": "none",
+        "summary": "",
+        "docs": null
+      },
+      "reasons": [],
+      "blocked_reasons": {
+        "codex": [],
+        "claude": []
+      },
+      "runtime_files": []
+    },
+    {
+      "id": "osterwalder-canvas-architect",
+      "path": "skills/osterwalder-canvas-architect",
       "targets": {
         "codex": "supported",
         "claude": "supported"
@@ -22959,6 +22997,25 @@
       "runtime_files": []
     },
     {
+      "id": "social-post-writer-seo",
+      "path": "skills/social-post-writer-seo",
+      "targets": {
+        "codex": "supported",
+        "claude": "supported"
+      },
+      "setup": {
+        "type": "none",
+        "summary": "",
+        "docs": null
+      },
+      "reasons": [],
+      "blocked_reasons": {
+        "codex": [],
+        "claude": []
+      },
+      "runtime_files": []
+    },
+    {
       "id": "social-proof-architect",
       "path": "skills/social-proof-architect",
       "targets": {
@@ -27211,10 +27268,10 @@
     }
   ],
   "summary": {
-    "total_skills": 1423,
+    "total_skills": 1426,
     "supported": {
-      "codex": 1392,
-      "claude": 1407
+      "codex": 1395,
+      "claude": 1410
     },
     "blocked": {
       "codex": 31,
