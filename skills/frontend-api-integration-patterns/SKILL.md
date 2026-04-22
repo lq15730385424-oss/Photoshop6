@@ -75,27 +75,29 @@ export const apiClient = async (url, options = {}) => {
 Prevent stale responses from overwriting fresh data.
 
 ```js id="y7p4ha"
-const fetchData = async () => {
+useEffect(() => {
   let cancelled = false;
 
-  try {
-    setLoading(true);
-    setError(null);
-    const result = await getUser();
+  const load = async () => {
+    try {
+      setLoading(true);
+      setError(null);
 
-    if (!cancelled) setData(result);
-  } catch (err) {
-    if (!cancelled) setError(err.message);
-  } finally {
-    if (!cancelled) setLoading(false);
-  }
+      const result = await getUser();
 
-  return () => { cancelled = true; };
-};
+      if (!cancelled) setData(result);
+    } catch (err) {
+      if (!cancelled) setError(err.message);
+    } finally {
+      if (!cancelled) setLoading(false);
+    }
+  };
 
-useEffect(() => {
-  const cancel = fetchData();
-  return cancel;
+  load();
+
+  return () => {
+    cancelled = true;
+  };
 }, []);
 ```
 
