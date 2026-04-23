@@ -1,32 +1,51 @@
 ---
 name: bulletmind
-description: >
-  Convert any input into clean, structured, hierarchical bullet points only. Use this skill when user says phrases like 'explain in bullets', 'convert to bullets'. Always rewrite content into a clear, indented bullet hierarchy suitable for summarization and note-taking
+description: "Convert input into clean, structured, hierarchical bullet points for summarization, note-taking, and structured thinking."
+category: writing
 risk: safe
 source: community
 date_added: "2026-04-21"
+author: tejasashinde
+tags:
+  - writing
+  - summarization
+  - note-taking
+  - formatting
+  - structured-output
+tools:
+  - claude
+  - cursor
+  - gemini
+  - codex
 ---
 
-# BULLETMIND
+# Bulletmind
 
-All responses remain strictly in hierarchical bullet format with no paragraphs, no prose blocks, no drift, and only structured bullet output.
+When active, responses remain in hierarchical bullet format with no paragraphs, no prose blocks, no drift, and only structured bullet output.
 
 ---
 
-## When to USE This Skill
+## When to Use This Skill
 
-Transform any input (paragraphs, notes, explanations, articles, webpage, etc.) into a **structured bullet hierarchy**:
+Transform input into a structured bullet hierarchy when the user asks for:
+
+- Bullet-only summaries of dense text, notes, explanations, articles, or webpages
+- Cleaned-up note-taking output with clear parent-child relationships
+- Structured study material that is easier to scan and memorize
+- Consistent formatting for messy or mixed bullet lists
+
+Use this skill to enforce:
+
 - No paragraphs or long prose
 - Only bullets with clean indentation
 
-This improves readability, memorization, and structured thinking often helpful in note taking.
+This improves readability, memorization, and structured thinking for note-taking and review workflows.
 
 ---
 
-## Persistence
+## Mode
 
-ACTIVE ALWAYS. Every response stays in bullet mode.
-Default: **full**. Switch: `/bulletmind lite|full|ultra`.
+Default mode: **full**. Switch with `/bulletmind lite|full|ultra` when the user asks for a different level of detail.
 
 ---
 
@@ -94,31 +113,30 @@ Use consistent indentation:
 
 ---
 
-## When NOT to use
+## When Not to Use This Skill
 
 - User requests paragraphs
-- creative writing (stories, essays)
-- formats where bullets reduce clarity
+- Creative writing tasks such as stories or essays
+- Formats where bullets reduce clarity or violate the requested output format
 
 ---
 
 ## Output Rule
 
-Always output:
+When the skill is active, output:
+
 - Structured bullet hierarchy
 - No commentary or explanation
 
+## Limitations
+
+- Do not use for deliverables that require prose, narrative flow, or exact source quotation.
+- Do not preserve bullet-only formatting if a higher-priority instruction requires tables, code blocks, JSON, or paragraphs.
+- Do not invent structure beyond the source material when the user asks for faithful summarization.
+
 ### Examples
 
-- Refer `EXAMPLES.md` for output templates
-
----
-
-## When NOT TO USE This Skill
-
-- User explicitly asks for paragraphs
-- Creative writing tasks (stories, essays, etc.)
-- Formatting where bullets would harm clarity
+- Refer to `EXAMPLES.md` for output templates.
 
 ---
 
