@@ -1,6 +1,7 @@
 ---
 name: lambda-lang
 description: "Native agent-to-agent language for compact multi-agent messaging. A shared tongue agents speak directly, not a translation layer. 340+ atoms across 7 domains; 3x smaller than natural language."
+category: ai-agents
 risk: safe
 source: community
 source_repo: voidborne-d/lambda-lang
