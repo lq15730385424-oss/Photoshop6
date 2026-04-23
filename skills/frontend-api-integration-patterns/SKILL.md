@@ -1,10 +1,22 @@
 ---
-
 name: frontend-api-integration-patterns
 description: "Production-ready patterns for integrating frontend applications with backend APIs, including race condition handling, request cancellation, retry strategies, error normalization, and UI state management."
+category: frontend
 risk: safe
 source: community
 date_added: "2026-04-23"
+author: avij1109
+tags:
+  - frontend
+  - api-integration
+  - javascript
+  - react
+  - async
+tools:
+  - claude
+  - cursor
+  - gemini
+  - codex
 ---
 
 # Frontend API Integration Patterns
@@ -145,7 +157,11 @@ const fetchWithBackoff = async (fn, retries = 3, delay = 300) => {
   try {
     return await fn();
   } catch (err) {
-    if (retries <= 0 || err.status < 500) throw err;
+    const isAbort = err.name === "AbortError";
+    const isHttpError = typeof err.status === "number";
+    const isRetryable = !isAbort && (!isHttpError || err.status >= 500);
+
+    if (retries <= 0 || !isRetryable) throw err;
 
     const nextDelay = delay * 2 + Math.random() * 100;
     await sleep(nextDelay);
@@ -306,6 +322,14 @@ const deleteItem = async (id) => {
 
 **Problem:** State updates after component unmount
 **Solution:** Use AbortController cleanup
+
+---
+
+## Limitations
+
+* These examples use vanilla JavaScript patterns; adapt them to your framework's data-fetching library when using React Query, SWR, Apollo, Relay, or similar tools.
+* Do not retry non-idempotent mutations unless the backend provides idempotency keys or another duplicate-safe contract.
+* Do not expose privileged API keys in frontend code; proxy sensitive requests through a backend.
 
 ---
 
