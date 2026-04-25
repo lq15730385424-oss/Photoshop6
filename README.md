@@ -210,6 +210,7 @@ Use the root repo as a landing page, then jump into the deeper surface that matc
 - **[Antigravity Awesome Skills vs Awesome Claude Skills](docs/users/antigravity-awesome-skills-vs-awesome-claude-skills.md)** for breadth vs curated-list tradeoffs.
 - **[Best Claude Code skills on GitHub](docs/users/best-claude-code-skills-github.md)** for a high-intent shortlist.
 - **[Best Cursor skills on GitHub](docs/users/best-cursor-skills-github.md)** for Cursor-compatible options and selection criteria.
+- **[Skills宝](https://skilery.com)** for Chinese search and installation of AI skills across Claude Code, OpenCode, and other agent tools.
 
 ## Troubleshooting
 
