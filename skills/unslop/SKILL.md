@@ -34,7 +34,9 @@ The `--deterministic` flag makes output reproducible — same input always produ
 Install once:
 
 ```bash
-npm install -g unslop
+pipx install unslop
+# or
+uv tool install unslop
 ```
 
 Verify:
@@ -126,10 +128,11 @@ done
 - Processes prose only — not code, JSON, or structured data
 - Does not catch factual errors or substantive writing issues
 - Some replacements may not fit every context; review the output before publishing
-- Requires Node.js and npm installed on the machine running the pipeline
+- Requires Python tooling such as `pipx` or `uv` for standalone CLI installation
 
 ## Security & Safety Notes
 
 - unslop reads from stdin and writes to stdout — no file system side effects by default
-- Does not make network requests
-- Safe to run in CI pipelines and commit hooks
+- `--deterministic` mode is local and does not make LLM API calls
+- Default LLM mode may use `ANTHROPIC_API_KEY` or the Claude CLI; use `--deterministic` for sensitive local files and CI gates
+- Safe to run in CI pipelines and commit hooks when pinned to deterministic mode
