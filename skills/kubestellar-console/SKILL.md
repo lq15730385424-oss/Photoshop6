@@ -2,7 +2,7 @@
 name: kubestellar-console
 description: "Multi-cluster Kubernetes dashboard with AI-powered operations via MCP server and 10+ built-in agent skills"
 category: devops
-risk: safe
+risk: critical
 source: community
 source_repo: kubestellar/console
 source_type: community
@@ -12,6 +12,11 @@ tags: [kubernetes, multi-cluster, mcp, dashboard, cncf, devops, observability]
 tools: [claude, cursor, gemini, codex]
 license: "Apache-2.0"
 license_source: "https://github.com/kubestellar/console/blob/main/LICENSE"
+plugin:
+  setup:
+    type: manual
+    summary: "Requires kc-agent binary (brew tap kubestellar/tap && brew install kc-agent)"
+    docs: "https://github.com/kubestellar/console#quick-start"
 ---
 
 # KubeStellar Console
@@ -65,6 +70,23 @@ The project ships with agent skills accessible via `CLAUDE.md` and `AGENTS.md`:
 - Supply chain security (SBOM, SLSA)
 - SQLite WASM caching with stale-while-revalidate pattern
 - 15+ themes with dark/light mode
+
+## Security & Safety Notes
+
+- **Critical risk:** `kc-agent` bridges your kubeconfig to MCP-compatible agents. If your kubeconfig carries cluster-admin or write permissions, agents will inherit those capabilities. Always use a least-privilege RBAC context.
+- **Recommended:** Create a dedicated read-only kubeconfig context for agent use:
+  ```bash
+  kubectl create clusterrole kc-agent-readonly --verb=get,list,watch --resource='*'
+  kubectl create clusterrolebinding kc-agent-readonly --clusterrole=kc-agent-readonly --serviceaccount=default:kc-agent
+  ```
+- Do not expose `kc-agent` on a public network without authentication.
+- Review [SECURITY-AI.md](https://github.com/kubestellar/console/blob/main/docs/security/SECURITY-AI.md) for prompt injection and agent drift mitigations.
+
+## Limitations
+
+- This skill requires an external binary (`kc-agent`) installed separately via Homebrew.
+- Do not treat agent output as a substitute for environment-specific validation or expert review.
+- Stop and ask for clarification if required permissions or safety boundaries are unclear.
 
 ## Links
 
