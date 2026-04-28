@@ -36,7 +36,9 @@ export function SkillProvider({ children }: { children: React.ReactNode }) {
 
             for (const url of candidateUrls) {
                 try {
-                    const res = await fetch(url);
+                    const controller = new AbortController();
+                    const timeoutId = setTimeout(() => controller.abort(), 10_000);
+                    const res = await fetch(url, { signal: controller.signal }).finally(() => clearTimeout(timeoutId));
                     if (!res.ok) {
                         throw new Error(`Request failed (${res.status}) for ${url}`);
                     }
