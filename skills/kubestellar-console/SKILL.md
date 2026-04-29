@@ -74,7 +74,7 @@ The project ships with agent skills accessible via `CLAUDE.md` and `AGENTS.md`:
 ## Security & Safety Notes
 
 - **Critical risk:** `kc-agent` bridges your kubeconfig to MCP-compatible agents. If your kubeconfig carries cluster-admin or write permissions, agents will inherit those capabilities. Always use a least-privilege RBAC context.
-- **Recommended:** Create a dedicated read-only kubeconfig context for agent use:
+- **Recommended:** Bind `kc-agent` to least-privilege read-only RBAC before using it with an agent:
   ```bash
   kubectl create clusterrole kc-agent-readonly --verb=get,list,watch --resource='*'
   kubectl create clusterrolebinding kc-agent-readonly --clusterrole=kc-agent-readonly --serviceaccount=default:kc-agent
