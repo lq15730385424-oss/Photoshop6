@@ -1,0 +1,446 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+<meta charset="UTF-8">
+<title>Wireframe — Quà Sinh Nhật Evoucher × Urbox</title>
+<style>
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body { background: #f0f2f5; font-family: 'Segoe UI', Arial, sans-serif; padding: 32px; }
+  h1 { text-align: center; color: #1a1a2e; font-size: 22px; margin-bottom: 8px; }
+  .subtitle { text-align: center; color: #666; font-size: 13px; margin-bottom: 36px; }
+  .flow-container { display: flex; align-items: flex-start; gap: 0; justify-content: center; flex-wrap: nowrap; overflow-x: auto; }
+  .screen-wrap { display: flex; flex-direction: column; align-items: center; }
+  .screen-label { font-size: 12px; font-weight: 700; color: #e84393; margin-bottom: 10px; text-align: center; text-transform: uppercase; letter-spacing: 0.5px; }
+  .uc-tag { font-size: 11px; color: #888; margin-bottom: 6px; }
+  canvas { border-radius: 36px; box-shadow: 0 8px 32px rgba(0,0,0,0.18); display: block; }
+  .arrow-wrap { display: flex; align-items: center; padding-top: 80px; padding-left: 4px; padding-right: 4px; }
+  .arrow { font-size: 28px; color: #e84393; }
+  .legend { max-width: 860px; margin: 40px auto 0; background: white; border-radius: 12px; padding: 20px 28px; box-shadow: 0 2px 12px rgba(0,0,0,0.08); }
+  .legend h3 { font-size: 14px; color: #333; margin-bottom: 12px; }
+  .legend-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 8px; }
+  .legend-item { display: flex; align-items: center; gap: 8px; font-size: 12px; color: #555; }
+  .dot { width: 12px; height: 12px; border-radius: 3px; flex-shrink: 0; }
+</style>
+</head>
+<body>
+
+<h1>Wireframe — Tính năng Quà Sinh Nhật Evoucher × Urbox</h1>
+<p class="subtitle">MB Life Style App &nbsp;|&nbsp; UC-04 → UC-07 → UC-08 → UC-09</p>
+
+<div class="flow-container">
+
+  <!-- SCREEN 1: Popup sinh nhật -->
+  <div class="screen-wrap">
+    <div class="uc-tag">UC-04 (Update)</div>
+    <div class="screen-label">Popup Sinh Nhật</div>
+    <canvas id="s1" width="220" height="420"></canvas>
+  </div>
+
+  <div class="arrow-wrap"><span class="arrow">→</span></div>
+
+  <!-- SCREEN 2: Quà của tôi -->
+  <div class="screen-wrap">
+    <div class="uc-tag">UC-07 (New)</div>
+    <div class="screen-label">Quà Của Tôi</div>
+    <canvas id="s2" width="220" height="420"></canvas>
+  </div>
+
+  <div class="arrow-wrap"><span class="arrow">→</span></div>
+
+  <!-- SCREEN 3: Webview Urbox -->
+  <div class="screen-wrap">
+    <div class="uc-tag">UC-08 (New)</div>
+    <div class="screen-label">Webview Urbox</div>
+    <canvas id="s3" width="220" height="420"></canvas>
+  </div>
+
+  <div class="arrow-wrap"><span class="arrow">→</span></div>
+
+  <!-- SCREEN 4: Đã nhận quà -->
+  <div class="screen-wrap">
+    <div class="uc-tag">UC-09 (New)</div>
+    <div class="screen-label">Đã Nhận Quà</div>
+    <canvas id="s4" width="220" height="420"></canvas>
+  </div>
+
+</div>
+
+<!-- Legend -->
+<div class="legend">
+  <h3>Chú thích màu</h3>
+  <div class="legend-grid">
+    <div class="legend-item"><div class="dot" style="background:#e84393"></div> Màu chủ đạo MB Life (hồng)</div>
+    <div class="legend-item"><div class="dot" style="background:#fff3f8;border:1px solid #e84393"></div> Nền popup / card</div>
+    <div class="legend-item"><div class="dot" style="background:#22c55e"></div> Status: Chưa nhận quà</div>
+    <div class="legend-item"><div class="dot" style="background:#94a3b8"></div> Status: Đã nhận quà</div>
+    <div class="legend-item"><div class="dot" style="background:#f97316"></div> Button Nhận quà (CTA chính)</div>
+    <div class="legend-item"><div class="dot" style="background:#e2e8f0"></div> Button phụ / Hướng dẫn</div>
+  </div>
+</div>
+
+<script>
+// ─── Helpers ───────────────────────────────────────────────────────────────
+function phone(ctx, w, h, title, bgColor) {
+  // Phone shell
+  ctx.fillStyle = '#1a1a2e';
+  roundRect(ctx, 0, 0, w, h, 32, true);
+  // Screen
+  ctx.fillStyle = bgColor || '#ffffff';
+  roundRect(ctx, 6, 14, w - 12, h - 28, 26, true);
+  // Notch
+  ctx.fillStyle = '#1a1a2e';
+  roundRect(ctx, w/2 - 22, 14, 44, 12, 6, true);
+  // Status bar
+  ctx.fillStyle = '#1a1a2e';
+  ctx.font = '7px Arial';
+  ctx.fillText('9:41', 16, 26);
+  ctx.fillText('●●●', w - 38, 26);
+}
+
+function roundRect(ctx, x, y, w, h, r, fill) {
+  ctx.beginPath();
+  ctx.moveTo(x + r, y);
+  ctx.lineTo(x + w - r, y);
+  ctx.quadraticCurveTo(x + w, y, x + w, y + r);
+  ctx.lineTo(x + w, y + h - r);
+  ctx.quadraticCurveTo(x + w, y + h, x + w - r, y + h);
+  ctx.lineTo(x + r, y + h);
+  ctx.quadraticCurveTo(x, y + h, x, y + h - r);
+  ctx.lineTo(x, y + r);
+  ctx.quadraticCurveTo(x, y, x + r, y);
+  ctx.closePath();
+  if (fill) ctx.fill();
+  else ctx.stroke();
+}
+
+function btn(ctx, x, y, w, h, label, bg, fg, r) {
+  ctx.fillStyle = bg;
+  roundRect(ctx, x, y, w, h, r || 8, true);
+  ctx.fillStyle = fg || '#fff';
+  ctx.font = `bold ${Math.min(10, w/label.length * 1.4)}px Arial`;
+  ctx.textAlign = 'center';
+  ctx.textBaseline = 'middle';
+  ctx.fillText(label, x + w/2, y + h/2);
+  ctx.textAlign = 'left';
+}
+
+function text(ctx, str, x, y, size, color, align, bold) {
+  ctx.fillStyle = color || '#1a1a2e';
+  ctx.font = `${bold ? 'bold ' : ''}${size}px Arial`;
+  ctx.textAlign = align || 'left';
+  ctx.textBaseline = 'alphabetic';
+  ctx.fillText(str, x, y);
+  ctx.textAlign = 'left';
+}
+
+function statusBadge(ctx, x, y, label, color) {
+  ctx.fillStyle = color;
+  roundRect(ctx, x, y, 70, 14, 4, true);
+  ctx.fillStyle = '#fff';
+  ctx.font = 'bold 7px Arial';
+  ctx.textAlign = 'center';
+  ctx.textBaseline = 'middle';
+  ctx.fillText(label, x + 35, y + 7);
+  ctx.textAlign = 'left';
+}
+
+function confetti(ctx, cx, cy, n) {
+  const colors = ['#e84393','#f97316','#22c55e','#3b82f6','#a855f7','#eab308'];
+  for (let i = 0; i < n; i++) {
+    const angle = (Math.PI * 2 / n) * i;
+    const r = 28 + Math.random() * 18;
+    const px = cx + Math.cos(angle) * r;
+    const py = cy + Math.sin(angle) * r;
+    ctx.fillStyle = colors[i % colors.length];
+    ctx.fillRect(px, py, 4, 4);
+  }
+}
+
+// ─── SCREEN 1: Popup sinh nhật ─────────────────────────────────────────────
+(function() {
+  const c = document.getElementById('s1');
+  const ctx = c.getContext('2d');
+  const W = c.width, H = c.height;
+
+  phone(ctx, W, H, '', '#f8fafc');
+
+  // Dim overlay
+  ctx.fillStyle = 'rgba(0,0,0,0.45)';
+  roundRect(ctx, 6, 14, W - 12, H - 28, 26, true);
+
+  // Popup card
+  ctx.fillStyle = '#fff';
+  roundRect(ctx, 18, 100, W - 36, 230, 14, true);
+
+  // Confetti
+  confetti(ctx, W/2, 130, 20);
+
+  // Cake emoji area
+  ctx.fillStyle = '#fff3f8';
+  ctx.beginPath();
+  ctx.arc(W/2, 130, 26, 0, Math.PI * 2);
+  ctx.fill();
+  text(ctx, '🎂', W/2 - 12, 137, 18, null, 'left');
+
+  // Title
+  text(ctx, 'Chúc mừng sinh nhật', W/2, 170, 9, '#e84393', 'center', true);
+  text(ctx, 'Quý Khách Nguyễn Văn A!', W/2, 182, 9, '#e84393', 'center', true);
+
+  // Body text
+  ctx.fillStyle = '#555';
+  ctx.font = '7.5px Arial';
+  ctx.textAlign = 'center';
+  const lines = [
+    'MB Life trân quý từng khoảnh khắc',
+    'đồng hành cùng Quý Khách trên',
+    'hành trình bảo vệ & vun đắp hạnh phúc.',
+    'Kính chúc Quý Khách tuổi mới',
+    'dồi dào sức khỏe & may mắn!'
+  ];
+  lines.forEach((l, i) => ctx.fillText(l, W/2, 197 + i * 11));
+  ctx.textAlign = 'left';
+
+  // Divider
+  ctx.strokeStyle = '#f0f0f0';
+  ctx.lineWidth = 1;
+  ctx.beginPath(); ctx.moveTo(28, 262); ctx.lineTo(W - 28, 262); ctx.stroke();
+
+  // Buttons
+  btn(ctx, 22, 270, 74, 24, 'Đóng', '#e2e8f0', '#555', 8);
+  btn(ctx, 104, 270, 96, 24, '🎁 Nhận quà', '#e84393', '#fff', 8);
+
+  // Note below popup
+  text(ctx, '* KH hạng Bạc/Vàng/Kim cương/VIP', W/2, 360, 7, '#ccc', 'center');
+})();
+
+// ─── SCREEN 2: Quà của tôi ─────────────────────────────────────────────────
+(function() {
+  const c = document.getElementById('s2');
+  const ctx = c.getContext('2d');
+  const W = c.width, H = c.height;
+
+  phone(ctx, W, H, '', '#f8fafc');
+
+  // Header
+  ctx.fillStyle = '#e84393';
+  ctx.fillRect(6, 28, W - 12, 32);
+  text(ctx, '← Quà của tôi', W/2, 49, 10, '#fff', 'center', true);
+
+  // ── Birthday gift card ──
+  ctx.fillStyle = '#fff';
+  roundRect(ctx, 12, 68, W - 24, 108, 10, true);
+  ctx.strokeStyle = '#fce7f3';
+  ctx.lineWidth = 1.5;
+  roundRect(ctx, 12, 68, W - 24, 108, 10, false);
+
+  // Gift icon bg
+  ctx.fillStyle = '#fff3f8';
+  roundRect(ctx, 18, 76, 36, 36, 8, true);
+  text(ctx, '🎁', 24, 100, 16, null, 'left');
+
+  // Badge
+  statusBadge(ctx, W - 90, 72, 'Chưa nhận quà', '#22c55e');
+
+  // Gift info
+  text(ctx, 'E-voucher trị giá', 62, 89, 8, '#888');
+  text(ctx, '200.000 VND', 62, 101, 10, '#e84393', 'left', true);
+  text(ctx, 'Quà sinh nhật', 62, 113, 8, '#555');
+
+  // Details row
+  text(ctx, '📅 Ngày tặng: 01/05/2026', 18, 126, 7.5, '#888');
+  text(ctx, '⏰ Hạn sử dụng: --/--/----', 18, 137, 7.5, '#aaa');
+
+  // Divider
+  ctx.strokeStyle = '#f9e8f2';
+  ctx.lineWidth = 1;
+  ctx.beginPath(); ctx.moveTo(18, 145); ctx.lineTo(W - 18, 145); ctx.stroke();
+
+  // Buttons
+  btn(ctx, 16, 150, 70, 20, 'Hướng dẫn', '#f1f5f9', '#555', 6);
+  btn(ctx, 94, 150, 102, 20, '🎁 Nhận quà', '#f97316', '#fff', 6);
+
+  // ── Other gift card (faded) ──
+  ctx.fillStyle = '#fafafa';
+  roundRect(ctx, 12, 186, W - 24, 78, 10, true);
+  ctx.strokeStyle = '#e5e7eb';
+  ctx.lineWidth = 1;
+  roundRect(ctx, 12, 186, W - 24, 78, 10, false);
+
+  ctx.fillStyle = '#f1f5f9';
+  roundRect(ctx, 18, 194, 36, 36, 8, true);
+  text(ctx, '🏆', 24, 218, 16, null, 'left');
+  statusBadge(ctx, W - 90, 190, 'Đã sử dụng', '#94a3b8');
+  text(ctx, 'E-voucher trị giá', 62, 207, 8, '#aaa');
+  text(ctx, '50.000 VND', 62, 219, 10, '#94a3b8', 'left', true);
+  text(ctx, '9 Năm Hành Trình Hạnh Phúc', 62, 231, 7.5, '#aaa');
+  ctx.strokeStyle = '#e5e7eb';
+  ctx.beginPath(); ctx.moveTo(18, 238); ctx.lineTo(W - 18, 238); ctx.stroke();
+  btn(ctx, 16, 244, 70, 18, 'Hướng dẫn', '#e2e8f0', '#888', 6);
+  ctx.fillStyle = '#e2e8f0';
+  roundRect(ctx, 94, 244, 102, 18, 6, true);
+  text(ctx, 'Đã sử dụng', 145, 253, 8, '#94a3b8', 'center');
+
+  // Scroll hint
+  text(ctx, '↓ Cuộn để xem thêm', W/2, 290, 8, '#ccc', 'center');
+
+  // Arrow indicator
+  text(ctx, '↑ Mục quà sinh nhật', W/2, 380, 8, '#e84393', 'center');
+})();
+
+// ─── SCREEN 3: Webview Urbox ────────────────────────────────────────────────
+(function() {
+  const c = document.getElementById('s3');
+  const ctx = c.getContext('2d');
+  const W = c.width, H = c.height;
+
+  phone(ctx, W, H, '', '#ffffff');
+
+  // Browser bar
+  ctx.fillStyle = '#f1f5f9';
+  ctx.fillRect(6, 28, W - 12, 22);
+  ctx.fillStyle = '#fff';
+  roundRect(ctx, 14, 31, W - 28, 15, 4, true);
+  text(ctx, '🔒 urbox.vn/mblife/gift/...', 20, 42, 7, '#555');
+
+  // Urbox header
+  ctx.fillStyle = '#ff6b35';
+  ctx.fillRect(6, 50, W - 12, 36);
+  text(ctx, 'urbox', W/2 - 28, 63, 11, '#fff', 'left', true);
+  ctx.fillStyle = '#fff';
+  ctx.beginPath(); ctx.arc(W/2 + 20, 68, 6, 0, Math.PI*2); ctx.fill();
+  text(ctx, '✓', W/2 + 16, 72, 8, '#ff6b35', 'left', true);
+
+  text(ctx, 'Nhận quà sinh nhật từ MB Life', W/2, 104, 9, '#1a1a2e', 'center', true);
+
+  // Gift badge
+  ctx.fillStyle = '#fff8f0';
+  roundRect(ctx, 30, 112, W - 60, 32, 8, true);
+  ctx.strokeStyle = '#ff6b35';
+  ctx.lineWidth = 1;
+  roundRect(ctx, 30, 112, W - 60, 32, 8, false);
+  text(ctx, '🎁', 38, 133, 14);
+  text(ctx, 'E-voucher 200.000đ', 58, 124, 8, '#ff6b35', 'left', true);
+  text(ctx, 'Quà sinh nhật từ MB Life', 58, 136, 7.5, '#888');
+
+  // Phone input
+  text(ctx, 'Nhập số điện thoại để nhận quà', W/2, 162, 8, '#555', 'center');
+  ctx.fillStyle = '#f8fafc';
+  ctx.strokeStyle = '#cbd5e1';
+  ctx.lineWidth = 1;
+  roundRect(ctx, 18, 168, W - 36, 26, 6, true);
+  roundRect(ctx, 18, 168, W - 36, 26, 6, false);
+  text(ctx, '🇻🇳 +84  |  09x xxx xxxx', 26, 185, 8, '#94a3b8');
+
+  btn(ctx, 18, 202, W - 36, 24, 'Gửi OTP', '#ff6b35', '#fff', 8);
+
+  // OTP section
+  ctx.strokeStyle = '#e2e8f0';
+  ctx.setLineDash([4, 4]);
+  ctx.beginPath(); ctx.moveTo(18, 238); ctx.lineTo(W - 18, 238); ctx.stroke();
+  ctx.setLineDash([]);
+  text(ctx, 'Nhập mã OTP đã gửi về SĐT', W/2, 254, 8, '#555', 'center');
+
+  // OTP boxes
+  const otpX = [22, 54, 86, 118, 150, 182];
+  otpX.forEach((x, i) => {
+    ctx.fillStyle = i < 3 ? '#f1f5f9' : '#fff';
+    ctx.strokeStyle = i < 3 ? '#e84393' : '#cbd5e1';
+    ctx.lineWidth = 1;
+    roundRect(ctx, x, 260, 24, 28, 6, true);
+    roundRect(ctx, x, 260, 24, 28, 6, false);
+    if (i < 3) text(ctx, '•', x + 9, 278, 14, '#e84393');
+  });
+
+  text(ctx, 'Gửi lại OTP (59s)', W/2, 300, 8, '#94a3b8', 'center');
+  btn(ctx, 18, 308, W - 36, 24, 'Xác nhận nhận quà', '#ff6b35', '#fff', 8);
+
+  // Note
+  text(ctx, '* Urbox tự xác thực, MB Life không', W/2, 350, 7, '#bbb', 'center');
+  text(ctx, 'can thiệp vào bước này', W/2, 360, 7, '#bbb', 'center');
+})();
+
+// ─── SCREEN 4: Đã nhận quà (UC-09) ────────────────────────────────────────
+(function() {
+  const c = document.getElementById('s4');
+  const ctx = c.getContext('2d');
+  const W = c.width, H = c.height;
+
+  phone(ctx, W, H, '', '#f8fafc');
+
+  // Header
+  ctx.fillStyle = '#e84393';
+  ctx.fillRect(6, 28, W - 12, 32);
+  text(ctx, '← Quà của tôi', W/2, 49, 10, '#fff', 'center', true);
+
+  // Callback indicator
+  ctx.fillStyle = '#dcfce7';
+  roundRect(ctx, 12, 68, W - 24, 22, 6, true);
+  text(ctx, '✓ Urbox callback → Status đã cập nhật', W/2, 82, 7.5, '#16a34a', 'center', true);
+
+  // ── Birthday gift card — ĐÃ NHẬN ──
+  ctx.fillStyle = '#fff';
+  roundRect(ctx, 12, 98, W - 24, 120, 10, true);
+  ctx.strokeStyle = '#e2e8f0';
+  ctx.lineWidth = 1;
+  roundRect(ctx, 12, 98, W - 24, 120, 10, false);
+
+  // Gift icon
+  ctx.fillStyle = '#f1f5f9';
+  roundRect(ctx, 18, 106, 36, 36, 8, true);
+  text(ctx, '🎁', 24, 130, 16);
+
+  // Status badge — Đã nhận quà
+  statusBadge(ctx, W - 90, 102, 'Đã nhận quà', '#94a3b8');
+
+  text(ctx, 'E-voucher trị giá', 62, 119, 8, '#888');
+  text(ctx, '200.000 VND', 62, 131, 10, '#94a3b8', 'left', true);
+  text(ctx, 'Quà sinh nhật', 62, 143, 8, '#aaa');
+
+  // Details with link
+  ctx.strokeStyle = '#f0f0f0';
+  ctx.beginPath(); ctx.moveTo(18, 152); ctx.lineTo(W - 18, 152); ctx.stroke();
+
+  text(ctx, '📅 Ngày tặng: 01/05/2026', 18, 163, 7.5, '#888');
+  text(ctx, '⏰ Hạn sử dụng: 31/07/2026', 18, 174, 7.5, '#888');
+
+  // Link quà
+  ctx.fillStyle = '#eff6ff';
+  roundRect(ctx, 18, 180, W - 36, 16, 4, true);
+  text(ctx, '🔗 Link quà: https://l.urbox.vn/...', 22, 191, 7, '#3b82f6');
+
+  // Divider
+  ctx.strokeStyle = '#f0f0f0';
+  ctx.beginPath(); ctx.moveTo(18, 200); ctx.lineTo(W - 18, 200); ctx.stroke();
+
+  // Buttons — Nhận quà bị ẩn
+  btn(ctx, 16, 206, 80, 20, 'Hướng dẫn', '#f1f5f9', '#555', 6);
+
+  // Greyed out button area
+  ctx.fillStyle = '#f1f5f9';
+  roundRect(ctx, 104, 206, 104, 20, 6, true);
+  text(ctx, '✓ Đã nhận quà', 156, 216, 8, '#94a3b8', 'center');
+
+  // ── Flow note ──
+  ctx.fillStyle = '#fffbeb';
+  roundRect(ctx, 12, 232, W - 24, 60, 8, true);
+  ctx.strokeStyle = '#fde68a';
+  ctx.lineWidth = 1;
+  roundRect(ctx, 12, 232, W - 24, 60, 8, false);
+  text(ctx, '⚡ Flow UC-09', 20, 246, 8, '#d97706', 'left', true);
+  const notes = [
+    'Urbox gửi webhook POST về BE',
+    'BE validate + update status DB',
+    'BE trả 200 OK cho Urbox',
+    'FE render trạng thái mới'
+  ];
+  notes.forEach((n, i) => text(ctx, `${i+1}. ${n}`, 20, 257 + i * 10, 7.5, '#92400e'));
+
+  // Duplicate callback note
+  ctx.fillStyle = '#f0fdf4';
+  roundRect(ctx, 12, 302, W - 24, 30, 8, true);
+  text(ctx, 'Duplicate callback → Bỏ qua,', W/2, 315, 7.5, '#16a34a', 'center');
+  text(ctx, 'trả 200 OK, không ghi đè data', W/2, 326, 7.5, '#16a34a', 'center');
+})();
+</script>
+</body>
+</html>
