@@ -13736,6 +13736,28 @@
     }
   },
   {
+    "id": "git-pr-review",
+    "path": "skills/git-pr-review",
+    "category": "workflow",
+    "name": "git-pr-review",
+    "description": "Generate a concise and structured PR description from commit history with minimal token usage",
+    "risk": "unknown",
+    "source": "unknown",
+    "date_added": null,
+    "plugin": {
+      "targets": {
+        "codex": "supported",
+        "claude": "supported"
+      },
+      "setup": {
+        "type": "none",
+        "summary": "",
+        "docs": null
+      },
+      "reasons": []
+    }
+  },
+  {
     "id": "git-pr-workflows-git-workflow",
     "path": "skills/git-pr-workflows-git-workflow",
     "category": "workflow",

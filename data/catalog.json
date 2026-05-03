@@ -1,6 +1,6 @@
 {
   "generatedAt": "2026-02-08T00:00:00.000Z",
-  "total": 1441,
+  "total": 1442,
   "skills": [
     {
       "id": "00-andruia-consultant",
@@ -15405,6 +15405,31 @@
         "automate"
       ],
       "path": "skills/git-hooks-automation/SKILL.md"
+    },
+    {
+      "id": "git-pr-review",
+      "name": "git-pr-review",
+      "description": "Generate a concise and structured PR description from commit history with minimal token usage",
+      "category": "general",
+      "tags": [
+        "git",
+        "pr"
+      ],
+      "triggers": [
+        "git",
+        "pr",
+        "review",
+        "generate",
+        "concise",
+        "structured",
+        "description",
+        "commit",
+        "history",
+        "minimal",
+        "token",
+        "usage"
+      ],
+      "path": "skills/git-pr-review/SKILL.md"
     },
     {
       "id": "git-pr-workflows-git-workflow",

@@ -2,7 +2,7 @@
 
 Generated at: 2026-02-08T00:00:00.000Z
 
-Total skills: 1441
+Total skills: 1442
 
 ## architecture (95)
 
@@ -684,7 +684,7 @@ Total skills: 1441
 | `zod-validation-expert` | Expert in Zod — TypeScript-first schema validation. Covers parsing, custom errors, refinements, type inference, and integration with React Hook Form, Next.js... | zod, validation | zod, validation, typescript, first, schema, covers, parsing, custom, errors, refinements, type, inference |
 | `zustand-store-ts` | Create Zustand stores following established patterns with proper TypeScript types and middleware. | zustand, store, ts | zustand, store, ts, stores, following, established, proper, typescript, types, middleware |
 
-## general (347)
+## general (348)
 
 | Skill | Description | Tags | Triggers |
 | --- | --- | --- | --- |
@@ -821,6 +821,7 @@ Total skills: 1441
 | `geoffrey-hinton` | Agente que simula Geoffrey Hinton — Godfather of Deep Learning, Prêmio Turing 2018, criador do backpropagation e das Deep Belief Networks. | persona, deep-learning, ai-safety, neural-networks | persona, deep-learning, ai-safety, neural-networks, geoffrey, hinton, agente, que, simula, godfather, deep, learning |
 | `gh-review-requests` | Fetch unread GitHub notifications for open PRs where review is requested from a specified team or opened by a team member. Use when asked to "find PRs I need... | gh, requests | gh, requests, review, fetch, unread, github, notifications, open, prs, where, requested, specified |
 | `git-advanced-workflows` | Master advanced Git techniques to maintain clean history, collaborate effectively, and recover from any situation with confidence. | git, advanced | git, advanced, techniques, maintain, clean, history, collaborate, effectively, recover, any, situation, confidence |
+| `git-pr-review` | Generate a concise and structured PR description from commit history with minimal token usage | git, pr | git, pr, review, generate, concise, structured, description, commit, history, minimal, token, usage |
 | `git-pr-workflows-onboard` | You are an **expert onboarding specialist and knowledge transfer architect** with deep experience in remote-first organizations, technical team integration, ... | git, pr, onboard | git, pr, onboard, onboarding, knowledge, transfer, architect, deep, experience, remote, first, organizations |
 | `git-pr-workflows-pr-enhance` | You are a PR optimization expert specializing in creating high-quality pull requests that facilitate efficient code reviews. Generate comprehensive PR descri... | git, pr, enhance | git, pr, enhance, optimization, specializing, creating, high, quality, pull, requests, facilitate, efficient |
 | `git-pushing` | Stage all changes, create a conventional commit, and push to the remote branch. Use when explicitly asks to push changes ("push this", "commit and push"), me... | git, pushing | git, pushing, stage, all, changes, conventional, commit, push, remote, branch, explicitly, asks |

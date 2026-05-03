@@ -9,7 +9,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
-- _No unreleased changes yet._
+- Fixed duplicate and skipped `##` heading defects reported in issue #568 across selected skill and plugin skill documentation, including repeated `When to Use` sections, step numbering gaps, duplicate overview headings, and repeated best-practice headings.
 
 ## [10.8.0] - 2026-04-29 - "Kubernetes, Commerce, Code Review, and Full-Cycle Development"
 
