@@ -163,6 +163,12 @@ From documented incidents:
 - **Progressive disclosure**: Start shallow, go deeper as risk increases
 - **Defense in depth**: Pair with runtime guards
 
+## Limitations
+
+- This skill is a review framework, not a sandbox or malware scanner.
+- It can miss novel obfuscation, private payloads, or risks outside the available repository contents.
+- Always combine findings with maintainer judgment, pinned dependencies, least-privilege runtime controls, and environment-specific validation.
+
 ## Source
 
 This skill is adapted from [aptratcn/skill-audit](https://github.com/aptratcn/skill-audit) — MIT licensed.
