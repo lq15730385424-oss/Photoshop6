@@ -42,15 +42,25 @@ The skill wraps the [commit.show](https://commit.show) audit engine via the publ
 
 ### Step 1: Run the audit
 
-From the repo root:
+From the repo root. The CLI is pinned to a known-good range (an attacker-pushed `0.4.x` won't be picked up silently — bumping the floor is a deliberate edit), the sidecar directory is created up-front, and stderr is split off so install/deprecation warnings can't corrupt the JSON envelope:
 
 ```bash
-npx commitshow@latest audit . --json > .commitshow/audit.json 2>&1
+mkdir -p .commitshow
+npx commitshow@^0.3.23 audit . --json \
+  > .commitshow/audit.json \
+  2> .commitshow/audit.stderr.log
 ```
 
 This also writes a human-readable `.commitshow/audit.md` next to it. Subsequent invocations should diff against the prior `audit.json` if it exists, so you can lead with "+5 since yesterday's audit" instead of just an absolute number.
 
-If the user pointed at a remote URL instead of `.`, swap in the URL: `npx commitshow@latest audit github.com/owner/repo --json`.
+If the user pointed at a remote URL instead of `.`, swap `.` for the URL — keep the same `mkdir -p` + version pin + stderr split:
+
+```bash
+mkdir -p .commitshow
+npx commitshow@^0.3.23 audit github.com/owner/repo --json \
+  > .commitshow/audit.json \
+  2> .commitshow/audit.stderr.log
+```
 
 ### Step 2: Parse the envelope
 
@@ -97,14 +107,24 @@ For the chosen concern:
 3. Propose a minimal patch — single-file when possible.
 4. **Don't apply without explicit approval.** Show the diff first. The user is deciding what to ship; you're a lens.
 
-After applying a fix, suggest re-running `npx commitshow audit --refresh` so the next audit reflects the change.
+After applying a fix, suggest re-running with `--refresh` (same canonical form as Step 1, so `audit.json` stays the source of truth for delta calculations):
+
+```bash
+mkdir -p .commitshow
+npx commitshow@^0.3.23 audit . --json --refresh \
+  > .commitshow/audit.json \
+  2> .commitshow/audit.stderr.log
+```
 
 ## Examples
 
 ### Example 1: User asks "is this production-ready?"
 
 ```bash
-npx commitshow@latest audit . --json > .commitshow/audit.json
+mkdir -p .commitshow
+npx commitshow@^0.3.23 audit . --json \
+  > .commitshow/audit.json \
+  2> .commitshow/audit.stderr.log
 ```
 
 Then surface:
@@ -147,7 +167,7 @@ Find the file path in the bullet, read it, confirm the gap matches.
 
 - This skill does not replace environment-specific validation, testing, or expert review.
 - The audit engine is calibrated for **deployed apps** with a live URL. CLI / library / scaffold form gets a partial-substitute score (max ~45/50 on the audit pillar) — fair but not flattering.
-- Behind a corporate firewall blocking `*.supabase.co`, the API call fails. Fall back to `npx commitshow audit . --json --no-network` for the deterministic-only checks.
+- Behind a corporate firewall blocking `*.supabase.co`, the API call fails. There is no offline mode — the audit relies on the public engine.
 - Cold audit takes 60-90s. Cached audits (within 7 days) return instantly. `--refresh` force-bypasses cache (counts against rate limits).
 
 ## Security & Safety Notes
