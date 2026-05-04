@@ -1,6 +1,6 @@
 ---
 name: production-audit
-description: "Audit a shipped repo for the 14 production-readiness gaps that ~70% of AI-coded projects miss — RLS, webhook idempotency, secret leaks, column GRANT mismatches, Stripe API idempotency, mobile input zoom, and more. Companion to in-session security skills — scans the deployed product, not the editor buffer."
+description: "Audit a shipped repo for production-readiness gaps across RLS, webhooks, secrets, grants, Stripe idempotency, mobile UX, and deployment health."
 category: security
 risk: safe
 source: community
