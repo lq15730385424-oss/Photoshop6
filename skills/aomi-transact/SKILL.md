@@ -1,6 +1,6 @@
 ---
 name: aomi-transact
-description: "Drive the Aomi CLI from natural-language prompts with account-abstraction-first execution, simulate-then-sign across 25+ DeFi apps."
+description: "Build natural-language crypto/DeFi agents and EVM MCP plugins (Claude Code, Cursor, Codex, Gemini). Aomi turns prompts into wallet-signed txs on Ethereum, Base, Arbitrum, Optimism, Polygon, Linea — non-custodial, fork-simulated. 40+ apps: Uniswap, Aave, Lido, Morpho, GMX, Hyperliquid, Polymarket."
 risk: critical
 source: "aomi-labs/skills (MIT)"
 source_repo: "aomi-labs/skills"
