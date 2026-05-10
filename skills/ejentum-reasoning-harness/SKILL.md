@@ -17,9 +17,9 @@ plugin:
 
 # Ejentum Reasoning Harness
 
-The Ejentum Reasoning Harness is an MCP server exposing four cognitive scaffold tools the agent can call when the task matches their trigger conditions. It targets four mechanism failures common in long agentic chains: attention decay (losing the original task), reasoning decay (compounding errors), sycophantic collapse (agreeing with the user's frame instead of evaluating it), and hallucination drift (asserting unsupported claims with confidence).
+The Ejentum Reasoning Harness is a library of 679 cognitive operations engineered in natural language, organized across four harnesses (`reasoning`, `code`, `anti-deception`, `memory`) and exposed as MCP tools the agent can call when the task matches their trigger conditions. It targets four mechanism failures common in long agentic chains: attention decay (losing the original task), reasoning decay (compounding errors), sycophantic collapse (agreeing with the user's frame instead of evaluating it), and hallucination drift (asserting unsupported claims with confidence).
 
-Each harness call returns a structured scaffold with a named failure pattern, an executable procedure, suppression vectors that block specific shortcuts, and a falsification test the agent uses for self-verification. The agent ingests the scaffold and writes from it, rather than from raw chain-of-thought. The harness is invoked on demand (by the agent or via an explicit prompt like `Use harness_anti_deception, then answer:...`); it does not auto-run on every turn.
+Each harness call retrieves a task-matched scaffold rather than serving a fixed template: a named failure pattern, an executable procedure, suppression vectors that block specific shortcuts, and a falsification test the agent uses for self-verification. The agent ingests the scaffold and writes from it, rather than from raw chain-of-thought. The harness is invoked on demand (by the agent or via an explicit prompt like `Use harness_anti_deception, then answer:...`); it does not auto-run on every turn.
 
 ## When to Use This Skill
 
