@@ -10,13 +10,14 @@ Stdout: human-readable summary.
 Exit non-zero on any failure (no silent partial writes).
 
 Usage:
-    python3 ingest.py <youtube-url> [--vault <path>] [--lang <code>] [--whisper]
+    python3 ingest.py <youtube-url> [--vault <path>] [--lang <code>]
 
 Defaults:
     --vault: $VAULT_ROOT or current dir
     --lang:  en,es (try English first, then Spanish; matches a common
              EN+ES bilingual default for users with multilingual content)
-    --whisper: off (Whisper fallback is opt-in for cost reasons)
+    --whisper: accepted as a future fallback flag; this version writes a stub
+               if subtitles are unavailable
 """
 from __future__ import annotations
 
@@ -262,8 +263,8 @@ def main() -> int:
     body = transcript or (
         f"# {title}\n\n"
         f"No subtitles or auto-captions available for this video.\n\n"
-        f"To capture this transcript, either re-run with `--whisper` (requires whisper-cpp installed) "
-        f"or use the YouTube Studio caption editor on the source video.\n\n"
+        "To capture this transcript, add captions to the source video or transcribe the audio "
+        "with your local Whisper workflow and re-run ingest.\n\n"
         f"Source: {args.url}\n"
     )
 

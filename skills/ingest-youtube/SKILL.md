@@ -1,9 +1,13 @@
 ---
 name: ingest-youtube
-description: "Pull a YouTube video transcript (or a channel's recent uploads) into a queryable markdown vault. Mirrors the ingest-* connector pattern (Slack, WhatsApp, Notion, Linear, GitHub, Gmail). Use when the user says ingest-youtube <url-or-channel> [--days N], or asks to ingest, capture, sync, transcribe, or pull a YouTube video or channel into the vault."
-risk: low
+description: "Pull a YouTube video transcript into a queryable markdown vault with yt-dlp subtitle discovery, VTT cleanup, metadata frontmatter, and capture-seed stubs."
+risk: safe
 source: community
+source_repo: adelaidasofia/ai-brain-starter
+source_type: community
 date_added: "2026-05-09"
+license: MIT
+license_source: "https://github.com/adelaidasofia/ai-brain-starter/blob/main/LICENSE"
 upstream: "https://github.com/adelaidasofia/ai-brain-starter/tree/main/skills/ingest-youtube"
 ---
 
@@ -17,21 +21,21 @@ Same pattern as ingest-slack, ingest-whatsapp, ingest-notion, ingest-linear, ing
 
 - User pastes a YouTube URL and asks for a transcript or summary
 - User says `/ingest-youtube <url>` for a single video
-- User says `/ingest-youtube <channel-handle> [--days N]` for a channel's recent uploads
 - User asks to capture, sync, ingest, transcribe, or pull a talk/podcast/keynote into the vault
 
 Do NOT use for:
 - Downloading the actual video file (use `yt-dlp` directly with `-f best`)
+- Channel-wide ingestion or `--days` windows; this script ingests one video URL at a time
 - Live streams (transcripts are not stable)
 - Non-YouTube sources (Vimeo, Twitch, Twitter Spaces have their own connectors)
 - One-off transcript reads where the user does not want a vault file (run `yt-dlp --write-auto-sub` directly and pipe to stdout)
 
 ## How it works
 
-1. Parse the input. Single URL means single-video mode. Channel handle (e.g. `@channelname`) means channel mode (last N days, default 14).
+1. Parse the input as one YouTube video URL.
 2. Verify `yt-dlp` is installed. If not, the script exits with install instructions: `brew install yt-dlp` (macOS) or `pip3 install --user yt-dlp`.
 3. Call `yt-dlp --list-subs <url>` to enumerate available subtitles.
-4. Subtitle priority: manual subs > auto-generated > Whisper fallback. Manual subs preserve creator-provided punctuation and speaker labels; auto-gen is uppercase + no punctuation; Whisper is the floor.
+4. Subtitle priority: manual subs > auto-generated captions. Manual subs preserve creator-provided punctuation and speaker labels; auto-gen is uppercase + no punctuation.
 5. Download the highest-priority subtitle as VTT via `yt-dlp --write-sub --sub-lang <lang> --skip-download`. Default language preference: `en,es` (English first, Spanish second).
 6. Strip VTT timing markers and merge into clean prose paragraphs. Deduplicate repeated lines (auto-generated VTTs are line-doubled). Preserve speaker labels if the source had them.
 7. Pull video metadata (title, channel, upload date, duration, video_id, URL) via `yt-dlp --print-json --skip-download`.
@@ -42,13 +46,13 @@ Do NOT use for:
 ## Invocation
 
 ```bash
-python3 ingest.py <youtube-url> [--vault <path>] [--lang <code>] [--whisper]
+python3 ingest.py <youtube-url> [--vault <path>] [--lang <code>]
 ```
 
 Defaults:
 - `--vault`: `$VAULT_ROOT` env var or current directory
 - `--lang`: `en,es` (English first, Spanish second; matches a common bilingual default)
-- `--whisper`: off (Whisper fallback is opt-in for cost reasons)
+- `--whisper`: accepted as a future fallback flag, but this version writes a stub when no subtitles are available
 
 ## Output contract
 
@@ -78,15 +82,11 @@ Body is the cleaned transcript as paragraph prose. If the source had speaker lab
 
 Re-ingesting the same video URL overwrites the same vault file. The seed stub filenames hash the video_id, so the same source video produces the same stub filename across re-runs. Re-runs refresh, never duplicate.
 
-## Whisper fallback
+## Missing subtitles
 
-If `yt-dlp --list-subs` returns no manual or auto subtitles AND `whisper-cpp` is installed locally, fall back to:
+If `yt-dlp --list-subs` returns no manual or auto subtitles, the script writes a stub vault note with the video metadata and source URL instead of failing silently. The `--whisper` flag is reserved for a future local transcription fallback and currently reports that the fallback is not implemented.
 
-1. `yt-dlp -x --audio-format mp3 -o <tmp>/<video-id>.mp3 <url>` to download audio
-2. `whisper-cli <tmp>/<video-id>.mp3 --model ggml-large-v3.bin --output-vtt` to transcribe
-3. Continue with the VTT cleanup pipeline
-
-Whisper fallback is OFF by default for cost reasons (real-time on CPU). Enable per-call with `--whisper`.
+For a manual fallback today, download audio with `yt-dlp`, transcribe it with your local Whisper workflow, and add captions or transcript text before rerunning the ingest.
 
 ## Acceptance test
 
@@ -106,7 +106,7 @@ The output file contains valid frontmatter and a clean prose body.
 ## Dependencies
 
 - `yt-dlp` (required): install via `brew install yt-dlp` or `pip3 install --user yt-dlp`
-- `whisper-cpp` (optional, for `--whisper` fallback): install via `brew install whisper-cpp` and download a ggml model
+- `whisper-cpp` (optional for a manual fallback outside this script)
 
 ## Source
 
