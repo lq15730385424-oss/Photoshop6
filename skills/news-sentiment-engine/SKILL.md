@@ -1,11 +1,26 @@
 ---
-name: News Sentiment Engine
+name: news-sentiment-engine
 description: Multi-source RSS news aggregation with Claude-powered sentiment analysis and structured briefing output
+category: research
+risk: safe
+source: community
+source_repo: tellmefrankie/news-engine
+source_type: community
+date_added: "2026-05-13"
 author: tellmefrankie
+tags: [news, rss, sentiment-analysis, briefing, research]
+tools: [claude, websearch]
 ---
 # News Sentiment Engine (Free)
 
 Collect and analyze AI/tech news from multiple sources with Claude-powered sentiment analysis. Open source lite version.
+
+## When to Use
+
+- Use when preparing a concise AI or technology news briefing from multiple RSS sources.
+- Use when you need ranked article summaries with sentiment, tags, and impact scoring.
+- Use when monitoring industry changes across product launches, policy moves, and infrastructure shifts.
+- Use when deduplicating overlapping coverage before writing a daily or weekly briefing.
 
 ## What it does
 

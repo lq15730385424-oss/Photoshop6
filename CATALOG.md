@@ -2,7 +2,7 @@
 
 Generated at: 2026-02-08T00:00:00.000Z
 
-Total skills: 1453
+Total skills: 1454
 
 ## architecture (95)
 
@@ -1181,7 +1181,7 @@ Total skills: 1453
 | `whatsapp-cloud-api` | Integracao com WhatsApp Business Cloud API (Meta). Mensagens, templates, webhooks HMAC-SHA256, automacao de atendimento. Boilerplates Node.js e Python. | messaging, whatsapp, meta, webhooks | messaging, whatsapp, meta, webhooks, cloud, api, integracao, com, business, mensagens, hmac, sha256 |
 | `workflow-automation` | Workflow automation is the infrastructure that makes AI agents reliable. Without durable execution, a network hiccup during a 10-step payment flow means lost... |  | automation, infrastructure, makes, ai, agents, reliable, without, durable, execution, network, hiccup, during |
 
-## security (174)
+## security (175)
 
 | Skill | Description | Tags | Triggers |
 | --- | --- | --- | --- |
@@ -1342,6 +1342,7 @@ Total skills: 1453
 | `temporal-golang-pro` | Use when building durable distributed systems with Temporal Go SDK. Covers deterministic workflow rules, mTLS worker configs, and advanced patterns. | temporal, golang | temporal, golang, pro, building, durable, distributed, go, sdk, covers, deterministic, rules, mtls |
 | `threat-mitigation-mapping` | Map identified threats to appropriate security controls and mitigations. Use when prioritizing security investments, creating remediation plans, or validatin... | threat, mitigation, mapping | threat, mitigation, mapping, map, identified, threats, appropriate, security, controls, mitigations, prioritizing, investments |
 | `threat-modeling-expert` | Expert in threat modeling methodologies, security architecture review, and risk assessment. Masters STRIDE, PASTA, attack trees, and security requirement ext... | threat, modeling | threat, modeling, methodologies, security, architecture, review, risk, assessment, masters, stride, pasta, attack |
+| `tokenwise` | Measurement-driven model router for Claude Code. Routes Haiku/Sonnet/Opus per task class, logs every routed task with real $ numbers, and A/B tests cheaper t... | model-routing, token-optimization, cost-reduction, anthropic, haiku, sonnet, opus, claude-code, ab-testing, measurement | model-routing, token-optimization, cost-reduction, anthropic, haiku, sonnet, opus, claude-code, ab-testing, measurement, tokenwise, driven |
 | `top-web-vulnerabilities` | Provide a comprehensive, structured reference for the 100 most critical web application vulnerabilities organized by category. This skill enables systematic ... | top, web, vulnerabilities | top, web, vulnerabilities, provide, structured, reference, 100, most, critical, application, organized, category |
 | `trust-calibrator` | One sentence - what this skill does and when to invoke it | trust, calibrator | trust, calibrator, one, sentence, what, skill, does, invoke |
 | `ui-review` | Review UI code for StyleSeed design-system compliance, accessibility, mobile ergonomics, spacing discipline, and implementation quality. | ui, review, design-system, accessibility, styleseed | ui, review, design-system, accessibility, styleseed, code, compliance, mobile, ergonomics, spacing, discipline, quality |
@@ -1497,7 +1498,7 @@ Total skills: 1453
 | `web-scraper` | Web scraping inteligente multi-estrategia. Extrai dados estruturados de paginas web (tabelas, listas, precos). Paginacao, monitoramento e export CSV/JSON. | scraping, data-extraction, automation, csv | scraping, data-extraction, automation, csv, web, scraper, inteligente, multi, estrategia, extrai, dados, estruturados |
 | `webflow-automation` | Automate Webflow CMS collections, site publishing, page management, asset uploads, and ecommerce orders via Rube MCP (Composio). Always search tools first fo... | webflow | webflow, automation, automate, cms, collections, site, publishing, page, asset, uploads, ecommerce, orders |
 | `wrike-automation` | Automate Wrike project management via Rube MCP (Composio): create tasks/folders, manage projects, assign work, and track progress. Always search tools first ... | wrike | wrike, automation, automate, via, rube, mcp, composio, tasks, folders, assign, work, track |
-| `x-twitter-scraper` | X/Twitter automation skill for tweet search, follower export, media download, posting, replies, DMs, webhooks, MCP, SDKs, and the TweetClaw OpenClaw plugin. | twitter, x-api, tweet-search, twitter-api, twitter-scraper, follower-export, automation, mcp, sdk, webhooks, openclaw, tweetclaw | twitter, x-api, tweet-search, twitter-api, twitter-scraper, follower-export, automation, mcp, sdk, webhooks, openclaw, tweetclaw |
+| `x-twitter-scraper` | X/Twitter automation skill for tweet search, follower export, posting, DMs, webhooks, MCP, SDKs, Hermes Tweet, and TweetClaw. | twitter, x-api, tweet-search, twitter-api, twitter-scraper, follower-export, automation, mcp, sdk, webhooks, hermes-agent, hermes-tweet, openclaw, tweetclaw | twitter, x-api, tweet-search, twitter-api, twitter-scraper, follower-export, automation, mcp, sdk, webhooks, hermes-agent, hermes-tweet |
 | `zendesk-automation` | Automate Zendesk tasks via Rube MCP (Composio): tickets, users, organizations, replies. Always search tools first for current schemas. | zendesk | zendesk, automation, automate, tasks, via, rube, mcp, composio, tickets, users, organizations, replies |
 | `zoho-crm-automation` | Automate Zoho CRM tasks via Rube MCP (Composio): create/update records, search contacts, manage leads, and convert leads. Always search tools first for curre... | zoho, crm | zoho, crm, automation, automate, tasks, via, rube, mcp, composio, update, records, search |
 | `zoom-automation` | Automate Zoom meeting creation, management, recordings, webinars, and participant tracking via Rube MCP (Composio). Always search tools first for current sch... | zoom | zoom, automation, automate, meeting, creation, recordings, webinars, participant, tracking, via, rube, mcp |

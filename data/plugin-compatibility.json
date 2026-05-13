@@ -25306,6 +25306,25 @@
       "runtime_files": []
     },
     {
+      "id": "tokenwise",
+      "path": "skills/tokenwise",
+      "targets": {
+        "codex": "supported",
+        "claude": "supported"
+      },
+      "setup": {
+        "type": "none",
+        "summary": "",
+        "docs": null
+      },
+      "reasons": [],
+      "blocked_reasons": {
+        "codex": [],
+        "claude": []
+      },
+      "runtime_files": []
+    },
+    {
       "id": "tool-design",
       "path": "skills/tool-design",
       "targets": {
@@ -27787,10 +27806,10 @@
     }
   ],
   "summary": {
-    "total_skills": 1453,
+    "total_skills": 1454,
     "supported": {
-      "codex": 1421,
-      "claude": 1436
+      "codex": 1422,
+      "claude": 1437
     },
     "blocked": {
       "codex": 32,

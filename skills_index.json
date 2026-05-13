@@ -29105,6 +29105,28 @@
     }
   },
   {
+    "id": "tokenwise",
+    "path": "skills/tokenwise",
+    "category": "developer-tools",
+    "name": "tokenwise",
+    "description": "Measurement-driven model router for Claude Code. Routes Haiku/Sonnet/Opus per task class, logs every routed task with real $ numbers, and A/B tests cheaper tiers before you trust the savings.",
+    "risk": "safe",
+    "source": "community",
+    "date_added": "2026-05-12",
+    "plugin": {
+      "targets": {
+        "codex": "supported",
+        "claude": "supported"
+      },
+      "setup": {
+        "type": "none",
+        "summary": "",
+        "docs": null
+      },
+      "reasons": []
+    }
+  },
+  {
     "id": "tool-design",
     "path": "skills/tool-design",
     "category": "ai-ml",
@@ -31599,7 +31621,7 @@
     "path": "skills/x-twitter-scraper",
     "category": "data",
     "name": "x-twitter-scraper",
-    "description": "X/Twitter automation skill for tweet search, follower export, media download, posting, replies, DMs, webhooks, MCP, SDKs, and the TweetClaw OpenClaw plugin.",
+    "description": "X/Twitter automation skill for tweet search, follower export, posting, DMs, webhooks, MCP, SDKs, Hermes Tweet, and TweetClaw.",
     "risk": "safe",
     "source": "community",
     "date_added": "2026-02-28",

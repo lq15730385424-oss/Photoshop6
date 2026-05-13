@@ -1,6 +1,6 @@
 {
   "generatedAt": "2026-02-08T00:00:00.000Z",
-  "total": 1453,
+  "total": 1454,
   "skills": [
     {
       "id": "00-andruia-consultant",
@@ -32674,6 +32674,39 @@
       "path": "skills/todoist-automation/SKILL.md"
     },
     {
+      "id": "tokenwise",
+      "name": "tokenwise",
+      "description": "Measurement-driven model router for Claude Code. Routes Haiku/Sonnet/Opus per task class, logs every routed task with real $ numbers, and A/B tests cheaper tiers before you trust the savings.",
+      "category": "security",
+      "tags": [
+        "model-routing",
+        "token-optimization",
+        "cost-reduction",
+        "anthropic",
+        "haiku",
+        "sonnet",
+        "opus",
+        "claude-code",
+        "ab-testing",
+        "measurement"
+      ],
+      "triggers": [
+        "model-routing",
+        "token-optimization",
+        "cost-reduction",
+        "anthropic",
+        "haiku",
+        "sonnet",
+        "opus",
+        "claude-code",
+        "ab-testing",
+        "measurement",
+        "tokenwise",
+        "driven"
+      ],
+      "path": "skills/tokenwise/SKILL.md"
+    },
+    {
       "id": "tool-design",
       "name": "tool-design",
       "description": "Build tools that agents can use effectively, including architectural reduction patterns. Use when creating new tools for agent systems, debugging tool-related failures or misuse, or optimizing existing tool sets for better agent performance.",
@@ -35396,7 +35429,7 @@
     {
       "id": "x-twitter-scraper",
       "name": "x-twitter-scraper",
-      "description": "X/Twitter automation skill for tweet search, follower export, media download, posting, replies, DMs, webhooks, MCP, SDKs, and the TweetClaw OpenClaw plugin.",
+      "description": "X/Twitter automation skill for tweet search, follower export, posting, DMs, webhooks, MCP, SDKs, Hermes Tweet, and TweetClaw.",
       "category": "workflow",
       "tags": [
         "twitter",
@@ -35409,6 +35442,8 @@
         "mcp",
         "sdk",
         "webhooks",
+        "hermes-agent",
+        "hermes-tweet",
         "openclaw",
         "tweetclaw"
       ],
@@ -35423,8 +35458,8 @@
         "mcp",
         "sdk",
         "webhooks",
-        "openclaw",
-        "tweetclaw"
+        "hermes-agent",
+        "hermes-tweet"
       ],
       "path": "skills/x-twitter-scraper/SKILL.md"
     },

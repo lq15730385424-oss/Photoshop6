@@ -1,11 +1,25 @@
 ---
-name: Options Flow Analyzer
+name: options-flow-analyzer
 description: Real vs lottery call separation for options P/C ratio analysis — prevents signal inversion from deep OTM noise
+category: finance
+risk: safe
+source: community
+source_type: community
+date_added: "2026-05-13"
 author: tellmefrankie
+tags: [options, sentiment-analysis, trading, polygon, market-analysis]
+tools: [websearch]
 ---
 # Options Flow Analyzer
 
 Analyze options chain data with real vs lottery call separation — the key insight that prevents P/C ratio misinterpretation. Uses Polygon.io API.
+
+## When to Use
+
+- Use when raw put/call ratios appear bullish or bearish but may be distorted by cheap deep OTM contracts.
+- Use when comparing options flow across watchlists, holdings, sectors, or event-driven names.
+- Use when you need to separate institutional hedging from speculative lottery-ticket activity.
+- Use when tracking options anomalies against a recent baseline.
 
 ## What it does
 
