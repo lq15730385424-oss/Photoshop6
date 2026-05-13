@@ -73,6 +73,7 @@ Test with the MCP Inspector, validate tool schemas, handle edge cases, then depl
 ```typescript
 import { McpServer } from "@modelcontextprotocol/sdk/server/mcp.js";
 import { StdioServerTransport } from "@modelcontextprotocol/sdk/server/stdio.js";
+import { z } from "zod";
 
 const server = new McpServer({ name: "my-tools", version: "1.0.0" });
 
