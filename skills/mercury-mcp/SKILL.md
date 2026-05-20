@@ -114,6 +114,12 @@ mercury_close_task               # close it with a one-paragraph summary
 - ✅ Stay under the rate limit: outbound agent-to-agent messages are throttled to 8 sends per 30s per agent to prevent runaway loops.
 - ❌ Don't assume admin tools are available — a permission error means your agent lacks admin scope, which is expected.
 
+## Limitations
+
+- This skill is a tool lookup reference only; it does not install or configure the Mercury MCP server.
+- Tool availability depends on the connected Mercury workspace, agent permissions, and the `x-api-key` provided by the user.
+- Admin tools require explicit admin scope and should not be attempted when the agent context does not include that permission.
+
 ## More
 
 - Full MCP reference: https://www.teamoffsite.ai/proton/docs/mcp
