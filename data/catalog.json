@@ -1,6 +1,6 @@
 {
   "generatedAt": "2026-02-08T00:00:00.000Z",
-  "total": 1460,
+  "total": 1462,
   "skills": [
     {
       "id": "00-andruia-consultant",
@@ -21215,6 +21215,31 @@
       "path": "skills/mental-health-analyzer/SKILL.md"
     },
     {
+      "id": "mercury-mcp",
+      "name": "mercury-mcp",
+      "description": "Cheatsheet for the Mercury (proton) MCP tools. Use when connected to the Mercury MCP server to look up which mercury_* tool to call for messaging teammates, threads, tasks, automations, or admin team-graph edits.",
+      "category": "general",
+      "tags": [
+        "mercury",
+        "mcp"
+      ],
+      "triggers": [
+        "mercury",
+        "mcp",
+        "cheatsheet",
+        "proton",
+        "connected",
+        "server",
+        "look",
+        "up",
+        "which",
+        "call",
+        "messaging",
+        "teammates"
+      ],
+      "path": "skills/mercury-mcp/SKILL.md"
+    },
+    {
       "id": "mermaid-expert",
       "name": "mermaid-expert",
       "description": "Create Mermaid diagrams for flowcharts, sequences, ERDs, and architectures. Masters syntax for all diagram types and styling.",
@@ -24600,6 +24625,32 @@
         "until"
       ],
       "path": "skills/phase-gated-debugging/SKILL.md"
+    },
+    {
+      "id": "photopea-embedded-editor",
+      "name": "photopea-embedded-editor",
+      "description": "Embed Photopea in web apps using photopea.js. Covers embedding, file I/O, scripting, exporting, layers, text, filters, and the full Photoshop-compatible API.",
+      "category": "data-ai",
+      "tags": [
+        "photopea",
+        "embedded",
+        "editor"
+      ],
+      "triggers": [
+        "photopea",
+        "embedded",
+        "editor",
+        "embed",
+        "web",
+        "apps",
+        "js",
+        "covers",
+        "embedding",
+        "file",
+        "scripting",
+        "exporting"
+      ],
+      "path": "skills/photopea-embedded-editor/SKILL.md"
     },
     {
       "id": "php-pro",

@@ -6,10 +6,12 @@ const fs = require("fs");
 const os = require("os");
 const { resolveSafeRealPath } = require("../lib/symlink-safety");
 const { listSkillIdsRecursive, readSkill } = require("../lib/skill-utils");
+const packageMetadata = require("../../package.json");
 
 const REPO = "https://github.com/sickn33/antigravity-awesome-skills.git";
 const HOME = process.env.HOME || process.env.USERPROFILE || "";
 const INSTALL_MANIFEST_FILE = ".antigravity-install-manifest.json";
+const DEFAULT_RELEASE_REF = packageMetadata.version ? `v${packageMetadata.version}` : null;
 
 function resolveDir(p) {
   if (!p) return null;
@@ -154,7 +156,7 @@ Options:
   --category <csv> Install only skills matching these categories
   --tags <csv>     Install only skills matching these tags
   --version <ver>  Clone tag v<ver> (e.g. 4.6.0 -> v4.6.0)
-  --tag <tag>      Clone this tag or branch (e.g. v4.6.0)
+  --tag <tag>      Clone this tag or branch (e.g. v4.6.0, main)
 
 Examples:
   npx antigravity-awesome-skills
@@ -267,6 +269,9 @@ function copyRecursiveSync(src, dest, rootDir = src, skipGit = true) {
 
   const resolvedStats = fs.statSync(resolvedSource);
   if (resolvedStats.isDirectory()) {
+    if (fs.existsSync(dest) && fs.lstatSync(dest).isSymbolicLink()) {
+      throw new Error(`Skipping unsafe destination symlink: ${dest}`);
+    }
     if (!fs.existsSync(dest)) {
       fs.mkdirSync(dest, { recursive: true });
     }
@@ -275,6 +280,9 @@ function copyRecursiveSync(src, dest, rootDir = src, skipGit = true) {
       copyRecursiveSync(path.join(resolvedSource, child), path.join(dest, child), rootDir, skipGit);
     });
   } else {
+    if (fs.existsSync(dest) && fs.lstatSync(dest).isSymbolicLink()) {
+      throw new Error(`Skipping unsafe destination symlink: ${dest}`);
+    }
     fs.copyFileSync(resolvedSource, dest);
   }
 }
@@ -414,6 +422,30 @@ function ensureTargetIsDirectory(targetPath) {
   process.exit(1);
 }
 
+function isSafeGitRef(ref) {
+  return (
+    typeof ref === "string" &&
+    ref.length > 0 &&
+    ref.length <= 128 &&
+    /^[A-Za-z0-9._/-]+$/.test(ref) &&
+    !ref.startsWith("-") &&
+    !ref.startsWith("/") &&
+    !ref.endsWith("/") &&
+    !ref.endsWith(".") &&
+    !ref.includes("..") &&
+    !ref.includes("//") &&
+    !ref.includes("@{") &&
+    ref !== "@" &&
+    !ref.split("/").some((part) => part.endsWith(".lock"))
+  );
+}
+
+function assertSafeGitRef(ref) {
+  if (!isSafeGitRef(ref)) {
+    throw new Error(`Unsafe git ref: ${ref}`);
+  }
+}
+
 function run(cmd, args, opts = {}) {
   const r = spawnSync(cmd, args, { stdio: "inherit", ...opts });
   if (r.status !== 0) process.exit(r.status == null ? 1 : r.status);
@@ -422,10 +454,21 @@ function run(cmd, args, opts = {}) {
 function buildCloneArgs(repo, tempDir, ref = null) {
   const args = ["clone", "--depth", "1"];
   if (ref) {
+    assertSafeGitRef(ref);
     args.push("--branch", ref);
   }
   args.push(repo, tempDir);
   return args;
+}
+
+function resolveInstallRef(opts) {
+  if (opts.tagArg) {
+    return opts.tagArg;
+  }
+  if (opts.versionArg) {
+    return opts.versionArg.startsWith("v") ? opts.versionArg : `v${opts.versionArg}`;
+  }
+  return DEFAULT_RELEASE_REF;
 }
 
 function installForTarget(tempDir, target, selectors = buildInstallSelectors({})) {
@@ -510,15 +553,8 @@ function getPostInstallMessages(targets, selectors = buildInstallSelectors({})) 
 
 function main() {
   const opts = parseArgs();
-  const { tagArg, versionArg } = opts;
   const selectors = buildInstallSelectors(opts);
-  const ref =
-    tagArg ||
-    (versionArg
-      ? versionArg.startsWith("v")
-        ? versionArg
-        : `v${versionArg}`
-      : null);
+  const ref = resolveInstallRef(opts);
 
   if (opts.help) {
     printHelp();
@@ -534,7 +570,6 @@ function main() {
   }
 
   const tempDir = fs.mkdtempSync(path.join(os.tmpdir(), "ag-skills-"));
-  const originalCwd = process.cwd();
 
   try {
     console.log("Cloning repository…");
@@ -579,6 +614,7 @@ module.exports = {
   getInstallEntries,
   installSkillsIntoTarget,
   installForTarget,
+  isSafeGitRef,
   isOpenCodeStylePath,
   main,
   matchesInstallSelectors,
@@ -586,5 +622,6 @@ module.exports = {
   parseSelectorArg,
   pruneRemovedEntries,
   readInstallManifest,
+  resolveInstallRef,
   writeInstallManifest,
 };

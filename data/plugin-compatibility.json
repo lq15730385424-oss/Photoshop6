@@ -16388,6 +16388,25 @@
       "runtime_files": []
     },
     {
+      "id": "mercury-mcp",
+      "path": "skills/mercury-mcp",
+      "targets": {
+        "codex": "supported",
+        "claude": "supported"
+      },
+      "setup": {
+        "type": "none",
+        "summary": "",
+        "docs": null
+      },
+      "reasons": [],
+      "blocked_reasons": {
+        "codex": [],
+        "claude": []
+      },
+      "runtime_files": []
+    },
+    {
       "id": "mermaid-expert",
       "path": "skills/mermaid-expert",
       "targets": {
@@ -18996,6 +19015,25 @@
     {
       "id": "phase-gated-debugging",
       "path": "skills/phase-gated-debugging",
+      "targets": {
+        "codex": "supported",
+        "claude": "supported"
+      },
+      "setup": {
+        "type": "none",
+        "summary": "",
+        "docs": null
+      },
+      "reasons": [],
+      "blocked_reasons": {
+        "codex": [],
+        "claude": []
+      },
+      "runtime_files": []
+    },
+    {
+      "id": "photopea-embedded-editor",
+      "path": "skills/photopea-embedded-editor",
       "targets": {
         "codex": "supported",
         "claude": "supported"
@@ -27926,10 +27964,10 @@
     }
   ],
   "summary": {
-    "total_skills": 1460,
+    "total_skills": 1462,
     "supported": {
-      "codex": 1427,
-      "claude": 1442
+      "codex": 1429,
+      "claude": 1444
     },
     "blocked": {
       "codex": 33,
