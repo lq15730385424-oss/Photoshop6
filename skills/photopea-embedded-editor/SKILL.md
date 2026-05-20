@@ -1,8 +1,12 @@
 ---
 name: photopea-embedded-editor
 description: Embed Photopea in web apps using photopea.js. Covers embedding, file I/O, scripting, exporting, layers, text, filters, and the full Photoshop-compatible API.
-risk: unknown
+risk: safe
 source: community
+source_repo: yikuansun/PhotopeaAPI
+source_type: community
+license: MIT
+license_source: "https://github.com/yikuansun/PhotopeaAPI/blob/master/LICENSE"
 date_added: 2026-05-20
 ---
 
@@ -1373,6 +1377,15 @@ app.echoToOE(JSON.stringify(getLayerInfo(app.activeDocument)));
 | `layer.bounds[0]` returns a UnitValue, not number | Ruler units issue | Force `Units.PIXELS` before reading bounds |
 | Smart Object edit hangs | Missing `doc.save(); doc.close()` | Always save + close when done editing SO |
 | React double-mount in dev | Strict Mode | Use `if (peaRef.current) return` guard in `useEffect` |
+
+---
+
+## Limitations
+
+- This skill covers host-page integration patterns; it does not replace Photopea's own terms, API documentation, or licensing guidance.
+- Remote URL loading depends on browser CORS behavior, network availability, and the user's Photopea account/session state.
+- `runScript` executes scripts inside the embedded Photopea document context. Only run scripts you understand and only with user-approved files.
+- Export behavior can vary by document size, browser memory limits, and the formats supported by the active Photopea runtime.
 
 ---
 
