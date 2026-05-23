@@ -1358,6 +1358,7 @@
         "libreoffice/writer",
         "odoo-qweb-templates",
         "office-productivity",
+        "pdf-conversion-router",
         "pdf-official",
         "pptx-official",
         "pr-writer",

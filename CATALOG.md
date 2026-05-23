@@ -2,7 +2,7 @@
 
 Generated at: 2026-02-08T00:00:00.000Z
 
-Total skills: 1464
+Total skills: 1465
 
 ## architecture (96)
 
@@ -692,7 +692,7 @@ Total skills: 1464
 | `zod-validation-expert` | Expert in Zod — TypeScript-first schema validation. Covers parsing, custom errors, refinements, type inference, and integration with React Hook Form, Next.js... | zod, validation | zod, validation, typescript, first, schema, covers, parsing, custom, errors, refinements, type, inference |
 | `zustand-store-ts` | Create Zustand stores following established patterns with proper TypeScript types and middleware. | zustand, store, ts | zustand, store, ts, stores, following, established, proper, typescript, types, middleware |
 
-## general (354)
+## general (355)
 
 | Skill | Description | Tags | Triggers |
 | --- | --- | --- | --- |
@@ -936,6 +936,7 @@ Total skills: 1464
 | `page-cro` | Analyze and optimize individual pages for conversion performance. | page, cro | page, cro, analyze, optimize, individual, pages, conversion, performance |
 | `paypal-integration` | Master PayPal payment integration including Express Checkout, IPN handling, recurring billing, and refund workflows. | paypal, integration | paypal, integration, payment, including, express, checkout, ipn, handling, recurring, billing, refund |
 | `paywall-upgrade-cro` | You are an expert in in-app paywalls and upgrade flows. Your goal is to convert free users to paid, or upgrade users to higher tiers, at moments when they've... | paywall, upgrade, cro | paywall, upgrade, cro, app, paywalls, flows, goal, convert, free, users, paid, higher |
+| `pdf-conversion-router` | Use when converting a PDF into another format such as Markdown, HTML, text, JSON, DOCX, or structured notes and the agent must choose the best extraction rou... | pdf, conversion, router | pdf, conversion, router, converting, another, format, such, markdown, html, text, json, docx |
 | `pentest-checklist` | Provide a comprehensive checklist for planning, executing, and following up on penetration tests. Ensure thorough preparation, proper scoping, and effective ... | pentest, checklist | pentest, checklist, provide, planning, executing, following, up, penetration, tests, thorough, preparation, proper |
 | `performance-optimizer` | Identifies and fixes performance bottlenecks in code, databases, and APIs. Measures before and after to prove improvements. | performance, optimizer | performance, optimizer, identifies, fixes, bottlenecks, code, databases, apis, measures, before, after, prove |
 | `performance-profiling` | Performance profiling principles. Measurement, analysis, and optimization techniques. | performance, profiling | performance, profiling, principles, measurement, analysis, optimization, techniques |

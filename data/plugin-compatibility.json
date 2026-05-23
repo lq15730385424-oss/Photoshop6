@@ -18873,6 +18873,25 @@
       "runtime_files": []
     },
     {
+      "id": "pdf-conversion-router",
+      "path": "skills/pdf-conversion-router",
+      "targets": {
+        "codex": "supported",
+        "claude": "supported"
+      },
+      "setup": {
+        "type": "none",
+        "summary": "",
+        "docs": null
+      },
+      "reasons": [],
+      "blocked_reasons": {
+        "codex": [],
+        "claude": []
+      },
+      "runtime_files": []
+    },
+    {
       "id": "pdf-official",
       "path": "skills/pdf-official",
       "targets": {
@@ -28020,10 +28039,10 @@
     }
   ],
   "summary": {
-    "total_skills": 1464,
+    "total_skills": 1465,
     "supported": {
-      "codex": 1428,
-      "claude": 1443
+      "codex": 1429,
+      "claude": 1444
     },
     "blocked": {
       "codex": 36,

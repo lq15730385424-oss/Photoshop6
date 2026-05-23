@@ -1,6 +1,6 @@
 {
   "generatedAt": "2026-02-08T00:00:00.000Z",
-  "total": 1464,
+  "total": 1465,
   "skills": [
     {
       "id": "00-andruia-consultant",
@@ -24421,6 +24421,32 @@
         "handling"
       ],
       "path": "skills/pci-compliance/SKILL.md"
+    },
+    {
+      "id": "pdf-conversion-router",
+      "name": "pdf-conversion-router",
+      "description": "Use when converting a PDF into another format such as Markdown, HTML, text, JSON, DOCX, or structured notes and the agent must choose the best extraction route, settings, and cleanup strategy for maximum fidelity and readability.",
+      "category": "general",
+      "tags": [
+        "pdf",
+        "conversion",
+        "router"
+      ],
+      "triggers": [
+        "pdf",
+        "conversion",
+        "router",
+        "converting",
+        "another",
+        "format",
+        "such",
+        "markdown",
+        "html",
+        "text",
+        "json",
+        "docx"
+      ],
+      "path": "skills/pdf-conversion-router/SKILL.md"
     },
     {
       "id": "pdf-official",
