@@ -426,7 +426,6 @@ Made with [contrib.rocks](https://contrib.rocks). *(Image may be cached; [view l
 
 We officially thank the following contributors for their help in making this repository awesome!
 
-- [@emanueleodierna729-ship-it](https://github.com/emanueleodierna729-ship-it) — Massive metadata audit & fix (1,449 skills, 5,286 fields, 62 categories)
 - [@sck000](https://github.com/sck000)
 - [@github-actions[bot]](https://github.com/apps/github-actions)
 - [@sickn33](https://github.com/sickn33)
