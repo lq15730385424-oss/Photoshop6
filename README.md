@@ -301,6 +301,8 @@ This collection would not be possible without the incredible work of the Claude 
 
 ### Community Contributors
 
+- **[emanueleodierna729-ship-it](https://github.com/emanueleodierna729-ship-it)**: Massive quality audit and metadata fix — added `id`, `category`, `tags`, `tools`, `author`, `date_added` to 1,433+ skills; resolved 714 `risk: unknown` labels; added `AUTHORIZED USE ONLY` disclaimers to 102 offensive skills; reclassified 2,187 skills into 62 granular categories; regenerated `skills_index.json`. All 1,465 skills now pass strict CI validation (0 errors).
+
 - **[multica-ai/andrej-karpathy-skills](https://github.com/multica-ai/andrej-karpathy-skills)**: Source for the `andrej-karpathy` skill - English Karpathy-inspired LLM coding guidelines for simplicity, surgical changes, assumption surfacing, and verifiable success criteria (MIT).
 - **[adelaidasofia/ai-brain-starter](https://github.com/adelaidasofia/ai-brain-starter)**: Source for the `ingest-youtube` skill - YouTube transcript ingestion into markdown vaults with yt-dlp metadata, VTT cleanup, and capture-seed stubs (MIT).
 - **[ejentum/ejentum-mcp](https://github.com/ejentum/ejentum-mcp)**: Source for the `ejentum-reasoning-harness` skill - MCP cognitive harness modes for reasoning, code review, anti-deception checks, and memory-drift analysis (MIT).
@@ -421,6 +423,7 @@ Made with [contrib.rocks](https://contrib.rocks). *(Image may be cached; [view l
 
 We officially thank the following contributors for their help in making this repository awesome!
 
+- [@emanueleodierna729-ship-it](https://github.com/emanueleodierna729-ship-it) — Massive metadata audit & fix (1,449 skills, 5,286 fields, 62 categories)
 - [@sck000](https://github.com/sck000)
 - [@github-actions[bot]](https://github.com/apps/github-actions)
 - [@sickn33](https://github.com/sickn33)
