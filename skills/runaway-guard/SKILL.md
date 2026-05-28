@@ -86,7 +86,7 @@ A cap only in code can be bypassed by a bug in that code. A cap only at the prov
    |---|---|
    | **Fal.ai** | Dashboard → Billing → **Spend Limit** (e.g. $50/day). Hard stop on exceed. |
    | **Anthropic** | Console → Workspaces → **Workspace Budget** with hard limit. Per-workspace, per-month. |
-   | **OpenAI** | Platform → Settings → **Usage limits** (hard limit + soft limit email). Per project. |
+   | **OpenAI** | Org → Settings → **Usage limits** (org-level hard limit blocks requests). ⚠️ Per-*project* monthly budgets are **soft thresholds only** — they alert but do not block. For a real hard cap use the org-level Usage limit, a billing gateway, or your own fail-closed budget check. |
    | **Replicate** | Account → Billing → **Spend limit**. Per account. |
    | **ElevenLabs** | Workspace → **Usage limits** per workspace / API key. |
    | **Together / Groq / Cohere / Mistral** | Each has a billing dashboard with a monthly spend cap — set it before first deploy, not after. |
@@ -138,7 +138,7 @@ export const generateCampaign = inngest.createFunction(
 );
 ```
 
-**What went wrong.** `fetchPrompts` had a bug: on a transient DB error it returned the partial list *plus the previous run's list appended*. Inngest retried the function 3 times by default. Each retry re-ran `fetchPrompts`, each retry doubled the list (40 → 80 → 160 → 320 prompts). `Promise.all` fanned all 320 out concurrently. At $0.05/image: **$16/retry × triangular growth across overnight retries on the schedule = ~$200 by morning.**
+**What went wrong.** `fetchPrompts` had a bug: on a transient DB error it returned the partial list *plus the previous run's list appended*. Inngest retried the function at its default retry count (multiple attempts in addition to the initial one). Each retry re-ran `fetchPrompts`, each retry doubled the list (40 → 80 → 160 → 320 prompts). `Promise.all` fanned all 320 out concurrently. At $0.05/image: **$16/retry × triangular growth across overnight retries on the schedule = ~$200 by morning.**
 
 **Why each rule would have caught it.**
 
@@ -218,8 +218,12 @@ Set these **before** the first deploy. None of them require code changes.
 - Prompt caching reduces cost ~90% for repeated context; cap is on unblended cost so caching extends the budget.
 
 ### OpenAI
-- Platform → **Settings → Limits**: per-project **hard limit** (blocks requests on exceed) + soft limit (email).
-- Set per-project, not per-org — keeps dev/staging/prod independent.
+- ⚠️ **Per-project monthly budgets are soft only.** OpenAI's Help Center documents project budgets as "soft spending thresholds" that send alerts but do **not** enforce a hard cap. A runaway can continue past the documented project budget.
+- For a real hard cap, use one of:
+  - **Org-level Usage limits** (Org → Settings → Limits) — block requests on exceed.
+  - A billing gateway / proxy in front of the API that enforces fail-closed budgets.
+  - Your own fail-closed budget check in code that refuses calls past a ledgered $-cap.
+- Use separate projects per environment (dev/staging/prod) for attribution and alerting, but do not rely on the project budget as the hard stop.
 
 ### Replicate
 - Account → **Billing → Spend limit**. Account-wide hard cap.
@@ -231,7 +235,7 @@ Set these **before** the first deploy. None of them require code changes.
 
 ### Inngest (queue layer — not paid AI but the multiplier)
 - `concurrency: { limit: N }` on every function that calls a paid API.
-- `retries: 2` (default 3) for paid call functions — fewer attempts on idempotent failures.
+- `retries: 2` (Inngest default is **4 retries**, i.e. up to 5 attempts including the initial — confirm against current Inngest docs) for paid call functions; fewer attempts on idempotent failures. Worst-case wallet math: `attempts = 1 + retries`, so a default `step.run()` can bill **5×**, not 4×.
 - `NonRetriableError` for 4xx — never retry a 4xx into a paid API.
 - `idempotency: ...` on events you cannot deduplicate at the call site.
 
