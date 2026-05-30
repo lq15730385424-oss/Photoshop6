@@ -1,16 +1,10 @@
 ---
 name: container-security-hardening
 description: >
-  Expert guidance for hardening containers and container images against security
-  threats. Use this skill whenever the user mentions Docker security, container
-  hardening, Dockerfile best practices, image scanning, distroless images,
-  non-root containers, container vulnerabilities, Trivy, Grype, Snyk, Dockerfile
-  lint, seccomp, AppArmor, container runtime security, or asks to "secure my
-  container", "harden my Docker image", "reduce attack surface", or "fix container
-  CVEs". Trigger even for general questions like "is my Dockerfile secure?" or
-  "how do I run containers safely in production?". Covers image hardening,
-  runtime security, supply chain security, scanning tools, and Kubernetes pod
-  security.
+  Harden Docker/container images and runtime deployments with secure base images,
+  non-root users, CVE scanning, SBOM/signing, seccomp/AppArmor, and Kubernetes
+  pod security controls. Use for Dockerfile security reviews, container CVEs,
+  image scanning, distroless images, or production hardening.
 category: security
 risk: safe
 source: community
@@ -306,7 +300,10 @@ CMD ["dist/server.js"]
 # Install
 brew install trivy                              # macOS
 apt install trivy                               # Debian/Ubuntu
-curl -sfL https://raw.githubusercontent.com/aquasecurity/trivy/main/contrib/install.sh | sh
+curl -sfL https://raw.githubusercontent.com/aquasecurity/trivy/main/contrib/install.sh \
+  -o /tmp/trivy-install.sh
+less /tmp/trivy-install.sh
+sh /tmp/trivy-install.sh
 
 # Scan an image for CVEs
 trivy image myapp:latest
@@ -341,7 +338,10 @@ CVE-2023-5678
 
 ```bash
 # Install
-curl -sSfL https://raw.githubusercontent.com/anchore/grype/main/install.sh | sh
+curl -sSfL https://raw.githubusercontent.com/anchore/grype/main/install.sh \
+  -o /tmp/grype-install.sh
+less /tmp/grype-install.sh
+sh /tmp/grype-install.sh
 
 # Scan image
 grype myapp:latest
