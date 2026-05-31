@@ -1,6 +1,6 @@
 ---
 name: moatmri
-description: AI disruption pressure analysis — activate when user asks where AI will break their business first, wants a competitive threat assessment, or needs a 90-day counterstrike plan against AI-native competitors. Runs 10-vector pressure analysis, builds a takeover storyboard, and produces actionable defensive moves.
+description: Analyze AI disruption pressure across a business, map competitive exposure, and produce a 90-day defensive action plan.
 risk: safe
 source: community
 date_added: "2026-05-31"
@@ -26,6 +26,12 @@ Ask if not provided:
 - **Industry** (e.g., "real estate", "community banking", "retail pharmacy", "law firm")
 - **Entity type** (e.g., "independent broker", "solo practitioner", "regional franchise")
 - **Target name** (optional — specific organization for named analysis)
+
+## Limitations
+
+- Produces strategic risk analysis, not audited market research or investment advice.
+- Depends on current company, market, regulatory, and competitive context supplied by the user or gathered from reliable sources.
+- Treats disruption scenarios as planning tools; scores should be revisited as new evidence appears.
 
 ### Step 2 — 10-Vector Pressure Map
 

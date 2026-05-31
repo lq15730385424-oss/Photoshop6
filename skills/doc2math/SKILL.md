@@ -1,6 +1,6 @@
 ---
 name: doc2math
-description: Convert any narrative document to a formal Mathematical Problem Specification (MPS) — activate when user provides a research paper, problem description, spec, or technical document and wants it formalized into variables, operators, constraints, objectives, and uncertainty. Uses Zero-Inference Protocol.
+description: Convert narrative technical documents into grounded Mathematical Problem Specifications with variables, constraints, objectives, and uncertainty.
 risk: safe
 source: community
 date_added: "2026-05-31"
@@ -24,6 +24,12 @@ date_added: "2026-05-31"
 4. **Inference Tagging** — structural inferences tagged `"inferred": true` with `"inference_basis"`
 5. **MISSING Markers** — elements mentioned but insufficiently defined get `"status": "MISSING"` with `"missing_reason"`
 6. **No Hallucinated Math** — never introduce equations or values not in the source text
+
+## Limitations
+
+- Does not invent missing equations, domains, values, or assumptions that are absent from the source document.
+- Requires enough source text to cite every extracted element; sparse prompts should be returned with explicit missing-information markers.
+- Produces a formal specification, not a solved optimization model or proof.
 
 ## How It Works
 

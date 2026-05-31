@@ -18,6 +18,12 @@ Passive income analysis across US Treasuries, dividend ETFs, REITs, and preferre
 - "How much capital do I need to retire on dividends?"
 - "Build me a conservative income portfolio"
 
+## Limitations
+
+- Provides portfolio research support, not personalized financial advice.
+- Requires live yield, price, tax, and risk data for current recommendations.
+- Does not account for every user-specific constraint unless the user provides it, including jurisdiction, tax status, and liquidity needs.
+
 ## Live Data Source (Optional)
 
 If the YIELD INTELLIGENCE MCP server is configured, call it directly for live rates:
