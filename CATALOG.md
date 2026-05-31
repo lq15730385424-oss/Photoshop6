@@ -2,7 +2,7 @@
 
 Generated at: 2026-02-08T00:00:00.000Z
 
-Total skills: 1492
+Total skills: 1493
 
 ## architecture (97)
 
@@ -1071,7 +1071,7 @@ Total skills: 1492
 | `youtube-summarizer` | Extract transcripts from YouTube videos and generate comprehensive, detailed summaries using intelligent analysis frameworks | video, summarization, transcription, youtube, content-analysis | video, summarization, transcription, youtube, content-analysis, summarizer, extract, transcripts, videos, generate, detailed, summaries |
 | `zipai-optimizer` | Adaptive token optimizer: intelligent filtering, surgical output, ambiguity-first, context-window-aware, VCS-aware, MCP-aware. | zipai, optimizer | zipai, optimizer, adaptive, token, intelligent, filtering, surgical, output, ambiguity, first, context, window |
 
-## infrastructure (136)
+## infrastructure (137)
 
 | Skill | Description | Tags | Triggers |
 | --- | --- | --- | --- |
@@ -1211,6 +1211,7 @@ Total skills: 1492
 | `vibecode-production-qa-validator` | End-to-end production QA, build verification, and launch-readiness checklist for fullstack Next.js apps before going live or shipping a major update. Covers ... | qa, testing, nextjs, production, build-validation, deployment, seo | qa, testing, nextjs, production, build-validation, deployment, seo, vibecode, validator, verification, launch, readiness |
 | `whatsapp-cloud-api` | Integracao com WhatsApp Business Cloud API (Meta). Mensagens, templates, webhooks HMAC-SHA256, automacao de atendimento. Boilerplates Node.js e Python. | messaging, whatsapp, meta, webhooks | messaging, whatsapp, meta, webhooks, cloud, api, integracao, com, business, mensagens, hmac, sha256 |
 | `workflow-automation` | Workflow automation is the infrastructure that makes AI agents reliable. Without durable execution, a network hiccup during a 10-step payment flow means lost... |  | automation, infrastructure, makes, ai, agents, reliable, without, durable, execution, network, hiccup, during |
+| `youtube-full` | Fetch YouTube transcripts, search videos, browse channels, and extract playlists via TranscriptAPI — no yt-dlp, no Google API key, works from any cloud server. | youtube, transcripts, video-search, channels, playlists, api, transcriptapi | youtube, transcripts, video-search, channels, playlists, api, transcriptapi, full, fetch, search, videos, browse |
 
 ## security (179)
 

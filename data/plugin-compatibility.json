@@ -28428,6 +28428,25 @@
       "runtime_files": []
     },
     {
+      "id": "youtube-full",
+      "path": "skills/youtube-full",
+      "targets": {
+        "codex": "supported",
+        "claude": "supported"
+      },
+      "setup": {
+        "type": "none",
+        "summary": "TranscriptAPI OAuth provisions the API key on first skill invocation. No manual credential setup. 100 free credits included.",
+        "docs": "https://transcriptapi.com/docs"
+      },
+      "reasons": [],
+      "blocked_reasons": {
+        "codex": [],
+        "claude": []
+      },
+      "runtime_files": []
+    },
+    {
       "id": "youtube-summarizer",
       "path": "skills/youtube-summarizer",
       "targets": {
@@ -28600,10 +28619,10 @@
     }
   ],
   "summary": {
-    "total_skills": 1492,
+    "total_skills": 1493,
     "supported": {
-      "codex": 1448,
-      "claude": 1463
+      "codex": 1449,
+      "claude": 1464
     },
     "blocked": {
       "codex": 44,

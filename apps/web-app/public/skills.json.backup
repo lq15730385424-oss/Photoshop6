@@ -32719,6 +32719,28 @@
     }
   },
   {
+    "id": "youtube-full",
+    "path": "skills/youtube-full",
+    "category": "api-integration",
+    "name": "youtube-full",
+    "description": "Fetch YouTube transcripts, search videos, browse channels, and extract playlists via TranscriptAPI \u2014 no yt-dlp, no Google API key, works from any cloud server.",
+    "risk": "safe",
+    "source": "community",
+    "date_added": "2026-05-29",
+    "plugin": {
+      "targets": {
+        "codex": "supported",
+        "claude": "supported"
+      },
+      "setup": {
+        "type": "none",
+        "summary": "TranscriptAPI OAuth provisions the API key on first skill invocation. No manual credential setup. 100 free credits included.",
+        "docs": "https://transcriptapi.com/docs"
+      },
+      "reasons": []
+    }
+  },
+  {
     "id": "youtube-summarizer",
     "path": "skills/youtube-summarizer",
     "category": "content",
