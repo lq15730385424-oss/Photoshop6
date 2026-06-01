@@ -104,7 +104,7 @@ Check the link in bio to pre-order!
 
 **Output**:
 ☕️ Your morning coffee just got a clean energy upgrade! 
-Did you know commuters throw away billions of cups annually? 
+Your commute just got smarter and greener. 
 The SolMug keeps your brew hot using only sunlight. 
 A small change for your bag, a big win for the planet. 
 Check the link in bio to pre-order! 

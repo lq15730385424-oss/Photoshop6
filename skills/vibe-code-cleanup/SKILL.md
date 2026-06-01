@@ -47,9 +47,9 @@ Always:
 Before changing anything, map the codebase:
 
 ```bash
-# List all pages/routes (portable)
-fd -HI -t f -g 'page.js' -g 'page.jsx' -g 'page.ts' -g 'page.tsx' .
-fd -HI -t f -g '*.js' -g '*.jsx' -g '*.ts' -g '*.tsx' pages | rg -v '/_' | sort
+# List all pages/routes
+find . -type f \( -name 'page.js' -o -name 'page.jsx' -o -name 'page.ts' -o -name 'page.tsx' \)
+find pages -type f \( -name '*.js' -o -name '*.jsx' -o -name '*.ts' -o -name '*.tsx' \) | rg -v '/_' | sort
 
 # Find broken imports (TS projects)
 npx tsc --noEmit 2>&1 | head -80
