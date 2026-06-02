@@ -5,15 +5,18 @@ description: >-
   Trigger on /user-thoughts or /ustht, or when user discusses architecture,
   tech stack, rules, UI/UX, or mentions '想法', '记录', 'mdbase'.
 license: MIT
-source: JularDepick/user-thoughts.SKILL
+source: "https://github.com/JularDepick/user-thoughts.SKILL"
+source_repo: JularDepick/user-thoughts.SKILL
+source_type: community
+date_added: "2026-05-31"
+author: JularDepick
+tags: [userthoughts, documentation, project-management, mdbase]
+tools: [claude, cursor, gemini]
 risk: safe
 allowed-tools: read write bash
 metadata:
   author: JularDepick
-  source_repo: JularDepick/user-thoughts.SKILL
   category: productivity
-  date_added: "2026-05-31"
-  tags: "[userthoughts, documentation, project-management, mdbase]"
   supported_agents: "[claude, cursor, gemini]"
 ---
 
