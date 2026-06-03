@@ -85,3 +85,9 @@ python3 scripts/route_contract.py --polis-root examples/research-team/_polis \
 - No server, no runtime, no database — the whole protocol is markdown plus two small Python scripts.
 - Vendor-agnostic by design; a Claude or Codex agent can join the same polis an Antigravity agent created.
 - Full Antigravity integration guide: https://github.com/yehudalevy-collab/polis-protocol/blob/main/docs/antigravity.md
+
+## Limitations
+
+- Routing quality depends on accurate citizen capability cards and enough settled work history to learn from.
+- The protocol coordinates agent work but does not replace review, tests, or explicit maintainer approval.
+- Multi-agent voting and amendments can add process overhead for small, single-owner tasks.
