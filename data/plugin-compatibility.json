@@ -19653,6 +19653,25 @@
       "runtime_files": []
     },
     {
+      "id": "polis-protocol",
+      "path": "skills/polis-protocol",
+      "targets": {
+        "codex": "supported",
+        "claude": "supported"
+      },
+      "setup": {
+        "type": "none",
+        "summary": "",
+        "docs": null
+      },
+      "reasons": [],
+      "blocked_reasons": {
+        "codex": [],
+        "claude": []
+      },
+      "runtime_files": []
+    },
+    {
       "id": "popup-cro",
       "path": "skills/popup-cro",
       "targets": {
@@ -23700,6 +23719,31 @@
       "blocked_reasons": {
         "codex": [],
         "claude": []
+      },
+      "runtime_files": []
+    },
+    {
+      "id": "skill-issue",
+      "path": "skills/skill-issue",
+      "targets": {
+        "codex": "blocked",
+        "claude": "blocked"
+      },
+      "setup": {
+        "type": "none",
+        "summary": "",
+        "docs": null
+      },
+      "reasons": [
+        "target_specific_home_path"
+      ],
+      "blocked_reasons": {
+        "codex": [
+          "target_specific_home_path"
+        ],
+        "claude": [
+          "target_specific_home_path"
+        ]
       },
       "runtime_files": []
     },
@@ -28638,14 +28682,14 @@
     }
   ],
   "summary": {
-    "total_skills": 1494,
+    "total_skills": 1496,
     "supported": {
-      "codex": 1450,
-      "claude": 1465
+      "codex": 1451,
+      "claude": 1466
     },
     "blocked": {
-      "codex": 44,
-      "claude": 29
+      "codex": 45,
+      "claude": 30
     },
     "manual_setup": 4
   }

@@ -2,7 +2,7 @@
 
 Generated at: 2026-02-08T00:00:00.000Z
 
-Total skills: 1494
+Total skills: 1496
 
 ## architecture (98)
 
@@ -197,7 +197,7 @@ Total skills: 1494
 | `wordpress-centric-high-seo-optimized-blogwriting-skill` | Generate clean, human-sounding, SEO-optimized WordPress blog posts with optional Yoast metadata, JSON-LD schema markup, and image SEO planning. Supports modu... | writing, blog, seo, content, wordpress | writing, blog, seo, content, wordpress, centric, high, optimized, blogwriting, skill, generate, clean |
 | `xiaohongshu-content-strategist` | Create viral Xiaohongshu (小红书) content with platform-native strategy, save-rate optimization, trending formats, and search SEO for China's #1 lifestyle platf... | xiaohongshu, chinese-market, content-strategy, social-media, marketing, 红书, 小红书 | xiaohongshu, chinese-market, content-strategy, social-media, marketing, 红书, 小红书, content, strategist, viral, platform, native |
 
-## data-ai (287)
+## data-ai (288)
 
 | Skill | Description | Tags | Triggers |
 | --- | --- | --- | --- |
@@ -410,6 +410,7 @@ Total skills: 1494
 | `photopea-embedded-editor` | Embed Photopea in web apps using photopea.js. Covers embedding, file I/O, scripting, exporting, layers, text, filters, and the full Photoshop-compatible API. | photopea, embedded, editor | photopea, embedded, editor, embed, web, apps, js, covers, embedding, file, scripting, exporting |
 | `php-pro` | Write idiomatic PHP code with generators, iterators, SPL data structures, and modern OOP features. Use PROACTIVELY for high-performance PHP applications. | php | php, pro, write, idiomatic, code, generators, iterators, spl, data, structures, oop, features |
 | `polars` | Fast in-memory DataFrame library for datasets that fit in RAM. Use when pandas is too slow but data still fits in memory. Lazy evaluation, parallel execution... | polars | polars, fast, memory, dataframe, library, datasets, fit, ram, pandas, too, slow, data |
+| `polis-protocol` | Coordinate multi-vendor AI agents as a self-improving team — a learning router assigns work by track record and citizens can amend the protocol's own rules. | multi-agent, coordination, routing, orchestration, governance, vendor-agnostic | multi-agent, coordination, routing, orchestration, governance, vendor-agnostic, polis, protocol, coordinate, multi, vendor, ai |
 | `postgres-best-practices` | Postgres performance optimization and best practices from Supabase. Use this skill when writing, reviewing, or optimizing Postgres queries, schema designs, o... | postgres, best, practices | postgres, best, practices, performance, optimization, supabase, skill, writing, reviewing, optimizing, queries, schema |
 | `postgresql` | Design a PostgreSQL-specific schema. Covers best-practices, data types, indexing, constraints, performance patterns, and advanced features | postgresql | postgresql, specific, schema, covers, data, types, indexing, constraints, performance, features |
 | `postgresql-optimization` | PostgreSQL database optimization workflow for query tuning, indexing strategies, performance analysis, and production database management. | postgresql, optimization | postgresql, optimization, database, query, tuning, indexing, performance, analysis |
@@ -1072,7 +1073,7 @@ Total skills: 1494
 | `youtube-summarizer` | Extract transcripts from YouTube videos and generate comprehensive, detailed summaries using intelligent analysis frameworks | video, summarization, transcription, youtube, content-analysis | video, summarization, transcription, youtube, content-analysis, summarizer, extract, transcripts, videos, generate, detailed, summaries |
 | `zipai-optimizer` | Adaptive token optimizer: intelligent filtering, surgical output, ambiguity-first, context-window-aware, VCS-aware, MCP-aware. | zipai, optimizer | zipai, optimizer, adaptive, token, intelligent, filtering, surgical, output, ambiguity, first, context, window |
 
-## infrastructure (137)
+## infrastructure (138)
 
 | Skill | Description | Tags | Triggers |
 | --- | --- | --- | --- |
@@ -1197,6 +1198,7 @@ Total skills: 1494
 | `server-management` | Server management principles and decision-making. Process management, monitoring strategy, and scaling decisions. Teaches thinking, not commands. | server | server, principles, decision, making, process, monitoring, scaling, decisions, teaches, thinking, commands |
 | `service-mesh-observability` | Complete guide to observability patterns for Istio, Linkerd, and service mesh deployments. | service, mesh, observability | service, mesh, observability, complete, istio, linkerd, deployments |
 | `skill-installer` | Instala, valida, registra e verifica novas skills no ecossistema. 10 checks de seguranca, copia, registro no orchestrator e verificacao pos-instalacao. | skill-management, deployment, validation, installation | skill-management, deployment, validation, installation, skill, installer, instala, valida, registra, verifica, novas, skills |
+| `skill-issue` | Find out why a coding-agent skill won't fire — grade each SKILL.md A–F on activation, simulate which skill a prompt triggers, and flag collisions where one s... | skills, linter, activation, meta, ci | skills, linter, activation, meta, ci, skill, issue, find, why, coding, agent, won |
 | `slo-implementation` | Framework for defining and implementing Service Level Indicators (SLIs), Service Level Objectives (SLOs), and error budgets. | slo | slo, framework, defining, implementing, level, indicators, slis, objectives, slos, error, budgets |
 | `sql-pro` | Master modern SQL with cloud-native databases, OLTP/OLAP optimization, and advanced query techniques. Expert in performance tuning, data modeling, and hybrid... | sql | sql, pro, cloud, native, databases, oltp, olap, optimization, query, techniques, performance, tuning |
 | `squirrel` | Full-cycle AI coding skill: plans, builds, tests, lints, fixes bugs, and writes production-grade docs. Auto-detects project state and adapts its 8-phase pipe... | development, testing, planning, code-review, documentation, ci-cd | development, testing, planning, code-review, documentation, ci-cd, squirrel, full, cycle, ai, coding, skill |

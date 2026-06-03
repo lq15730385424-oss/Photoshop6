@@ -22631,6 +22631,28 @@
     }
   },
   {
+    "id": "polis-protocol",
+    "path": "skills/polis-protocol",
+    "category": "orchestration",
+    "name": "polis-protocol",
+    "description": "Coordinate multi-vendor AI agents as a self-improving team \u2014 a learning router assigns work by track record and citizens can amend the protocol's own rules.",
+    "risk": "safe",
+    "source": "community",
+    "date_added": "2026-06-02",
+    "plugin": {
+      "targets": {
+        "codex": "supported",
+        "claude": "supported"
+      },
+      "setup": {
+        "type": "none",
+        "summary": "",
+        "docs": null
+      },
+      "reasons": []
+    }
+  },
+  {
     "id": "popup-cro",
     "path": "skills/popup-cro",
     "category": "marketing",
@@ -27174,6 +27196,30 @@
         "docs": null
       },
       "reasons": []
+    }
+  },
+  {
+    "id": "skill-issue",
+    "path": "skills/skill-issue",
+    "category": "meta",
+    "name": "skill-issue",
+    "description": "Find out why a coding-agent skill won't fire \u2014 grade each SKILL.md A\u2013F on activation, simulate which skill a prompt triggers, and flag collisions where one silently shadows another.",
+    "risk": "safe",
+    "source": "community",
+    "date_added": "2026-06-02",
+    "plugin": {
+      "targets": {
+        "codex": "blocked",
+        "claude": "blocked"
+      },
+      "setup": {
+        "type": "none",
+        "summary": "",
+        "docs": null
+      },
+      "reasons": [
+        "target_specific_home_path"
+      ]
     }
   },
   {
