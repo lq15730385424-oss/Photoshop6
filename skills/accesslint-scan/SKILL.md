@@ -1,6 +1,6 @@
 ---
 name: accesslint-scan
-description: "Audit a live page for accessibility issues and locate each violation precisely — optionally pass a URL (e.g. `accesslint:scan https://example.com/dashboard`), otherwise ask for one. Ensures a debuggable Chrome, runs the @accesslint/core engine via CDP, and returns a worklist of live-DOM WCAG violations grounded to each violation's DOM selector and source file:line. Locates; doesn't edit — output drives fixes by Claude. Use it for \\"is this page accessible\\", or to verify a UI change. For diffing against uncommitted changes or a branch, use the `diff` skill."
+description: "Audit a live page for accessibility issues and locate each violation precisely — optionally pass a URL (e.g. `accesslint:scan https://example.com/dashboard`), otherwise ask for one. Ensures a debuggable Chrome, runs the @accesslint/core engine via CDP, and returns a worklist of live-DOM WCAG violations grounded to each violation's DOM selector and source file:line. Locates; doesn't edit — output drives fixes by Claude. Use it for \'is this page accessible\', or to verify a UI change. For diffing against uncommitted changes or a branch, use the `diff` skill."
 risk: safe
 source: "https://github.com/AccessLint/skills"
 date_added: "2026-06-02"
