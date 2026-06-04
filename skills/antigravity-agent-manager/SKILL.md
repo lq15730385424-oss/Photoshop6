@@ -84,3 +84,11 @@ git diff
 git add .
 git commit -m "feat: synchronize parallel front-end and back-end agent changes"
 ```
+
+## Best Practices
+
+- ✅ **Do:** Run both applications simultaneously side-by-side.
+- ✅ **Do:** Enforce strict folder-level boundaries (scopes) for each agent in the Agent Manager.
+- ✅ **Do:** Use git branches or commits to checkpoint progress before letting agents perform massive rewrites.
+- ❌ **Don't:** Let multiple agents edit the same file at the same time, as it causes write conflicts and git merge conflicts.
+- ❌ **Don't:** Search for the "Open Agent Manager" button in the black icon IDE; use the standalone white icon application instead.
