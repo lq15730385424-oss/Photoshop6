@@ -104,3 +104,9 @@ git commit -m "feat: synchronize parallel front-end and back-end agent changes"
   **Solution:** Isolate their workspaces. If they must edit the same file, orchestrate them sequentially (e.g., run the backend agent first, commit its changes, then run the frontend agent).
 - **Problem:** Agent Manager changes are not visible in the IDE.
   **Solution:** Verify that both applications are pointing to the exact same absolute file path. On Windows, watch out for mapped drives or symlinks.
+
+## Related Skills
+
+- `@antigravity-workflows` - To guide the agent through sequential multi-agent execution.
+- `@antigravity-skill-orchestrator` - For task complexity assessment and general skill routing.
+- `@gitops-workflow` - To coordinate commits and branch merges in team environments.
