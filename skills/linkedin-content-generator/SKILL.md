@@ -35,8 +35,9 @@ Seven coordinated commands cover the full content workflow:
 | `/feedback` | Save what worked for future outputs |
 | `/clear-memory` | Reset memory to factory defaults |
 
-The skill ships with four Python helper scripts that build richly engineered prompts, inject
-your saved preferences, and enforce LinkedIn SEO rules before Claude generates output.
+All helper scripts are bundled inside `skills/linkedin-content-generator/scripts/` and ship
+alongside this `SKILL.md`. They build richly engineered prompts, inject your saved
+preferences, and enforce LinkedIn SEO rules before Claude generates output.
 A local `memory.md` file persists your style, tone, successful hooks, and top-performing
 formats across every session.
 
@@ -54,15 +55,19 @@ formats across every session.
 
 **Python 3.8 or later** must be available in your shell path.
 
-Clone or copy the skill into your Claude Code project skills directory:
+The skill is self-contained. Install it from the antigravity skills library:
 
 ```bash
-# Clone the source repository
-git clone https://github.com/sarveshtalele/linkedin-content-skill.git
+# Install via antigravity CLI (recommended)
+antigravity install linkedin-content-generator
+
+# Or copy manually into your Claude Code skills directory
+cp -r skills/linkedin-content-generator ~/.claude/skills/
 ```
 
-The skill reads `scripts/memory.md` on first run and creates it automatically if the file
-does not exist. No API keys, external services, or network access are required.
+All six Python scripts and the default `memory.md` are bundled inside the
+`scripts/` subdirectory of this skill. No additional cloning or downloads are required.
+No API keys, external services, or network access are needed.
 
 ## How It Works
 
@@ -89,7 +94,8 @@ Claude generates publish-ready output
 
 ### Step 1: Set Up Your Niche (One-Time)
 
-Open `scripts/memory.md` and update the **Primary Niche** field:
+Open `~/.claude/skills/linkedin-content-generator/scripts/memory.md` and update the
+**Primary Niche** field:
 
 ```markdown
 ## Core Identity & Tone
@@ -339,7 +345,7 @@ executing.
 
 ## LinkedIn SEO Rules (Enforced Automatically)
 
-The skill injects these rules into every prompt via `scripts/utils.py`. They are **not**
+The skill injects these rules into every prompt via the bundled `scripts/utils.py`. They are **not**
 optional; they are part of the prompt engineering that makes outputs platform-native.
 
 ### Hook Engineering
@@ -400,15 +406,16 @@ optional; they are part of the prompt engineering that makes outputs platform-na
 
 ## Security & Safety Notes
 
-This skill uses the `Bash` allowed-tool to run local Python scripts. All scripts are
-read-only operations except `memory_manager.py`, which writes only to the local
-`scripts/memory.md` file within the project directory.
+This skill uses the `Bash` allowed-tool to run Python scripts bundled at
+`~/.claude/skills/linkedin-content-generator/scripts/`. All scripts are read-only
+operations except `memory_manager.py`, which writes only to `memory.md` inside that
+same bundled `scripts/` directory.
 
 - No network requests are made by any script.
 - No credentials, tokens, or secrets are read, written, or logged.
-- No files outside the project's `scripts/` directory are modified.
-- The `clear` command in `memory_manager.py` overwrites only `scripts/memory.md`; it
-  does not delete any other files.
+- No files outside `~/.claude/skills/linkedin-content-generator/scripts/` are modified.
+- The `clear` command in `memory_manager.py` overwrites only the bundled `memory.md`;
+  it does not delete any other files.
 - All `--feedback` and `--id` arguments passed to `memory_manager.py` are written
   verbatim to `memory.md`. Do not pass shell metacharacters or sensitive data as
   feedback strings.
@@ -417,26 +424,29 @@ All Bash commands in this skill are local Python invocations with no elevated pr
 required:
 
 ```bash
-# All script calls follow this pattern — local execution, no network, no sudo
-python3 scripts/generate_post.py --topic "..." --niche "..." --tone professional --style list-based
-python3 scripts/memory_manager.py add --id "..." --feedback "..." --tags "..."
-python3 scripts/memory_manager.py read
-python3 scripts/memory_manager.py clear
+# SKILL_SCRIPTS resolves to ~/.claude/skills/linkedin-content-generator/scripts
+SKILL_SCRIPTS="${HOME}/.claude/skills/linkedin-content-generator/scripts"
+python3 "${SKILL_SCRIPTS}/generate_post.py" --topic "..." --niche "..." --tone professional --style list-based
+python3 "${SKILL_SCRIPTS}/memory_manager.py" add --id "..." --feedback "..." --tags "..."
+python3 "${SKILL_SCRIPTS}/memory_manager.py" read
+python3 "${SKILL_SCRIPTS}/memory_manager.py" clear
 ```
 
-<!-- security-allowlist: approved — all commands are local Python script invocations with no network access, no credential handling, and writes scoped to scripts/memory.md only -->
+<!-- security-allowlist: approved — all commands are local Python script invocations with no network access, no credential handling, and writes scoped to the skill's own bundled scripts/memory.md only -->
 
 ## Common Pitfalls
 
 - **Problem:** Script exits with `ModuleNotFoundError` or `No module named 'utils'`.
-  **Solution:** The scripts must be run from the project root (not from inside `scripts/`).
-  Claude invokes them as `python3 scripts/generate_post.py ...` — matching the path
-  expected by `sys.path.insert(0, SCRIPT_DIR)` in each file.
+  **Solution:** Each script uses `sys.path.insert(0, SCRIPT_DIR)` to locate `utils.py`
+  relative to itself, so they must be invoked with an absolute path — not from inside
+  the `scripts/` directory. Use
+  `python3 "${HOME}/.claude/skills/linkedin-content-generator/scripts/generate_post.py" ...`.
 
 - **Problem:** Memory is not being applied to generated content.
-  **Solution:** Check that `memory.md` exists at `scripts/memory.md` (relative to project
-  root). Run `/show-memory` to confirm the file is found and populated. If the file is
-  missing, run any generator command once — it auto-creates the file.
+  **Solution:** Check that `memory.md` exists at
+  `~/.claude/skills/linkedin-content-generator/scripts/memory.md`. Run `/show-memory`
+  to confirm. If missing, run any generator command once — it auto-creates the file from
+  the bundled template.
 
 - **Problem:** Calendar output is missing days or the table is malformed.
   **Solution:** Verify the `--days` value is a positive integer and `--frequency` is
@@ -455,7 +465,7 @@ python3 scripts/memory_manager.py clear
 
 - **Problem:** `python3` not found on Windows.
   **Solution:** Install Python 3.8+ from python.org and ensure it is on PATH, or run via
-  `py scripts/generate_post.py ...`. On Windows without WSL, the `Bash` tool invocation
+  `py "%USERPROFILE%\.claude\skills\linkedin-content-generator\scripts\generate_post.py" ...`. On Windows without WSL, the `Bash` tool invocation
   may need adjustment in the SKILL.md `allowed-tools` context.
 
 ## Related Skills
