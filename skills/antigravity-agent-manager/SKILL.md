@@ -97,3 +97,10 @@ git commit -m "feat: synchronize parallel front-end and back-end agent changes"
 
 - This skill assumes you have local administrator permissions to install both applications on Windows/macOS.
 - Coordination of file locks relies on standard IDE file-system watchers. If changes do not reflect, reload the IDE workspace (`Ctrl+R` or developer reload).
+
+## Common Pitfalls
+
+- **Problem:** Agents overwrite each other's code or get stuck in write locks.
+  **Solution:** Isolate their workspaces. If they must edit the same file, orchestrate them sequentially (e.g., run the backend agent first, commit its changes, then run the frontend agent).
+- **Problem:** Agent Manager changes are not visible in the IDE.
+  **Solution:** Verify that both applications are pointing to the exact same absolute file path. On Windows, watch out for mapped drives or symlinks.
